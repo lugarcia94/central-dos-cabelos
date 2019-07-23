@@ -44,7 +44,7 @@
         border-radius: 1px
         -webkit-appearance: none
         background: #fff
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAQAAABd57cKAAAAaklEQVQI12MwKzcr/c/IgAT+M5qVmZUzmOWa/jNb58YNE3bjNlsHFMkFMi38zD6bXbSSBwlbyZtdNPts4QdVZaVjds/0lbmNuY3pK7N7VjpI5jqImB4w/QmEBxxEGFBBGqtZl1lvGiuMDwCYoh5FSjiDnAAAAABJRU5ErkJggg==')
+        background-image: url('data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAQAAABd57cKAAAAaklEQVQI12MwKzcr/c/IgAT+M5qVmZUzmOWa/jNb58YNE3bjNlsHFMkFMi38zD6bXbSSBwlbyZtdNPts4QdVZaVjds/0lbmNuY3pK7N7VjpI5jqImB4w/QmEBxxEGFBBGqtZl1lvGiuMDwCYoh5FSjiDnAAAAABJRU5ErkJggg==')
         background-repeat: no-repeat
         background-position: 95%
         height 42px
@@ -190,8 +190,11 @@
         display: none !important
 
     .main-container
-        @extend $container 
-
+        max-width: 1330px
+        padding: 0 15px
+        width: 100%
+        margin: 0 auto
+        
     .product__price 
         position relative
         border: 1px solid #E7E7E7
@@ -308,7 +311,8 @@
                 border: none!important
                 background: #ffffff
                 color: #333333 
-                margin-right 10px
+                margin-right 9px
+                margin-bottom 10px
                 
                 &[data-atributoselecionado="False"]
                     border: none !important
@@ -339,7 +343,7 @@
 
             .valorAtributoFoto
                 // border: none !important
-                background: #fff
+                background: transparent
                 width: 50px
                 height: auto
                 background-size: auto 40px !important
@@ -347,8 +351,6 @@
                 margin-top: 10px
                 position relative 
                 display: block
-     
- 
 
             .valorAtributo[data-atributoselecionado="False"]
                 border none
@@ -424,58 +426,39 @@
         .item-block-title
             border: none
             margin-bottom: 20px
-            text-align: center
-            text-transform: uppercase
-            font-size: 35px
-            font-weight: 700
-            color: #434343
             position relative
             z-index 1
-            font-size: 0
+            font-size: 25px
+            line-height: 30px
+            color: #333333
+            font-weight: 700
+            text-align: center
+            padding-bottom 5px
 
-
-            &:after
-                z-index 0
-                content: 'Produtos similares'
-                width 35%
+            &::before
+                content ''
                 position absolute
-                left: 50% 
-                transform: translate(-50%, -50%)
-                height 50px
-                background: #fff
-                font-size: 35px
-
-                @media(max-width: 767px)
-                    width 80%
-                    font-size: 20px
-                    display: flex
-                    align-items: center
-                    justify-content: center
-
-            &:before
-                content: ''
-                width: 100%
-                height: 1.1px
-                position: absolute
-                background: #FFF115
-                display: block
-                top: 50%
-                transform: translateY(-50%)
-                z-index -1
+                top 100%
+                left 50%
+                transform translateX(-50%)
+                display block
+                width: 73px
+                height: 5px
+                background-color: #ee3a53
 
             .fbits-conteudo-item
-                position: relative;
+                position: relative
                 display: flex
                 justify-content: center
                 >span 
-                    border-bottom:1px solid #3d161d !important;
-                    top: 1.06rem;
-                    display: table-cell;
-                    height: 1px;
-                    top: 17px;
-                    position: absolute;
-                    width: 100%;
-                    left: 0;
+                    border-bottom:1px solid #3d161d !important
+                    top: 1.06rem
+                    display: table-cell
+                    height: 1px
+                    top: 17px
+                    position: absolute
+                    width: 100%
+                    left: 0
                 
                 >div
                     background: #fff
@@ -924,10 +907,6 @@ div#fbits-avaliar-produto
             margin-right: 5px
 
 .short__description
-    margin-top 50px
-
-    @media(max-width: 991px)
-        margin-top 20px
 
     .paddingbox
         font-size: 14px
@@ -1122,12 +1101,12 @@ div#fbits-avaliar-produto
 
 
 .fbits-etiquetas-sequencial 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    right: 0;
-    top: 0;
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    position: absolute
+    right: 0
+    top: 0
 
 .ribbon.fbits-etiqueta-off, .produto .fbits-preco-off
     background: #FF5D5D
@@ -1416,3 +1395,16 @@ section.showcase__one.showcase__list .showcase__container
                 
 .content.produto
     border-top: 1px solid #F3F3F3 
+
+
+.product__top
+    margin-bottom 50px
+
+.product__right
+    flex 1 1 365px
+    min-width 0px
+    justify-content: flex-end
+    display: flex
+    flex-wrap wrap
+.center
+    max-width none

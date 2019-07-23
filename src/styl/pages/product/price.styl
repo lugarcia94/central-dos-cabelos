@@ -169,6 +169,7 @@
     display: flex
     justify-content: center
     flex-wrap: wrap
+    border none
 
 [id*="produto-comprar"]
     margin: 0 
@@ -199,11 +200,14 @@
         transition: $transition
 
         &:after
-            content: 'comprar'
-            font-size: 18px
+            content: 'Quero comprar'
             cursor pointer
-            font-weight: 700
             text-shadow:  0 0
+            font-size: 18px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
 
         &:hover
             color: #fff
@@ -243,8 +247,6 @@
         align-items: center
         padding: 0
         position relative
-        flex-wrap: wrap
-        justify-content: space-between
 
         @media(max-width: 992px)
             flex-wrap: wrap
@@ -268,14 +270,14 @@
 
     #btnCalculaFreteProduto
         margin: 0
-        width 47%
-        height 35px 
+        width 48px
+        height 40px 
         color: #ffffff
-        background: #5BC0B9
+        background: #1c1d1d
         border: none
         cursor: pointer 
         height 40px
-        font-size: 15px!important
+        font-size: 14px!important
         font-weight: 700!important
 
         @media(max-width: 991px)
@@ -485,6 +487,9 @@
  
 .carrinhoInputBlock
     float: none
+    border none
+    padding 0
+    margin 0
 
 .addthis_inline_share_toolbox 
     margin-top: 75px

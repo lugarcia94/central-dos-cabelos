@@ -1,15 +1,15 @@
 .product__details
     width: 100%
-    max-width: 580px
+    max-width: 738px
     display: flex
-    flex-wrap: wrap
     justify-content: space-between
+    flex-wrap wrap
 
     @media(max-width: 1250px)
         max-width 24%
 
     .product__details-topo
-        flex: 0 0 100%
+        flex: 1 1 356px
 
         @media(max-width: 992px)
             display: flex
@@ -228,7 +228,7 @@
         position relative
         
     #btnCalculaFreteProduto
-        background: #373535
+        background: #1c1d1d
         color:#fff
         font-size: 18px
         font-weight: 700
@@ -290,11 +290,10 @@
         text-align: left
 
 .ui-slider-tabs-content-container
-    border: none!important
+    border: 1px solid #d9d9d9
     height auto!important
+    padding 50px 40px
 
-.ui-slider-tabs-list-wrapper
-    margin: 0 0 20px 0 !important
 
 .ui-slider-tabs-list li
     border: none!important
@@ -323,13 +322,22 @@
         line-height: 29px
 
 
-.ui-slider-tabs-list li.selected
-    background: none!important
-    width: 100%
+.ui-slider-tabs-list li
+    background transparent
+    padding  15px 40px!important
+    height 50px!important
+    display: flex
+    align-items: center
+    justify-content: center
+
     a
+        height 100%!important 
+
+        line-height normal !important
+
         h3
-            color: #434343 !important
-            font-size: 35px
+            font-size: 14px
+            color: #333333
             font-weight: 700
             text-decoration: none  
             display: flex
@@ -337,30 +345,17 @@
             justify-content: center
             z-index 2
 
-
-            &:before
-                content: ''
-                background: $cor01
-                width: 100%
-                height: 1px
-                position: absolute
-                z-index -1
-
-            &:after
-                background: #fff
-                z-index -1
-                position: absolute
-                left 50%
-                transform: translateX(-50%)
-                content: ''
-                width 30%
-                height 50px
-
             @media(max-width: 992px)
                 font-size: 23px
 
                 &:before, &:after
                     display: none
+
+.ui-slider-tabs-list li.selected
+    background-color: #f2f2f2
+    border: 1px solid #d9d9d9!important
+   
+    
   
 .ui-slider-tab-content
     padding: 0!important
@@ -404,10 +399,11 @@
                     background: #F6F6F6
 
 .paddingbox, .fbits-produto-informacoes-extras
-    font-size: 14px
-    color: #333333
-    line-height: 18px
-    font-family: 'Muli'
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+    font-family: "Montserrat";
+    font-weight: 400;
     text-align: left
 
     iframe 
@@ -453,3 +449,4 @@
 .produto .fbits-avaliacao
     @media(max-width: 767px)
         width 100%
+
