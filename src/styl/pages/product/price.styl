@@ -120,15 +120,21 @@
     width: 100%
     text-align: center
     margin: 15px 0
-    display: none
+    display flex
+    align-items center
 
     .fbits-titulo-quantidade.atributo-div
-        font-size: 15px
+        font-size: 12px
+        text-transform: uppercase
+        line-height: 1.2
+        text-align: left      
         color: #353535
         text-transform: none
         font-weight: 400
         margin-right 5px
         width auto
+        margin-bottom 0
+
 
     #menosQtd 
         font-size: 20px
@@ -151,7 +157,7 @@
         display: none
 
     #item-quantidade-1
-        border: 1px solid #E8E8E8
+        border: none
         color: #979797
         font-size: 15px
         line-height: 16px
@@ -184,7 +190,7 @@
 
 .produto-comprar
     a
-        background: #4AC87A
+        background-color: rgb(0, 173, 90);
         cursor: pointer
         color: #fff
         font-size: 0!important 
@@ -207,12 +213,20 @@
             letter-spacing: 1px;
             color: #ffffff;
             font-weight: 600;
-            text-align: center;
+            text-align: center
+            display inline-block
+
+         &:before
+             content: ''
+             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAMAAAC3SZ14AAABDlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8v3yHCAAAAWnRSTlMAQMb99aUYPvqxUGPb2g3DtwEX8XH3s6YJIP90uh68a92RMH6/0ov2YR8DywxJj+8/mbsmMTmD1TsZautW/gRTBek6G4XTJDWbuQpKtaNlinrlc8WVkKqpwG0I50RoAAAAvElEQVQYGQXBMUoDYRQGwPn+fbuboJWICBYWoqBoK9hZeQVv6gFs04tVUqR3ITaiZONMgCRJfkHAmCRJdlBgkUxOEtDA8Dfx1XUgzkMyo7NXW82QxCFJ5jnZXyptjJ/lAc2sizLm8/bHmrs4fJxN2v13r3eMYZoGFw/aaDQejVi3ttb3qtdbgd0OFa2uegDoN89tW+8A0OnqOgCgVFUAQKmqAIC36tqmAQDLVjcBAF6SxekTAFg95jUAgPwDLCclWPh/hxYAAAAASUVORK5CYII=')no-repeat;
+             display: inline-block
+             width: 23px
+             height: 24px
 
         &:hover
             color: #fff
             text-decoration: none
-            background: darken(#4AC87A, 20%)
+            background: darken(#4AC87A, 20%)    
 
 #cepCarrinho 
     .summary
@@ -220,13 +234,11 @@
 
     .simule
         font-size: 0
-        margin-top 5px
         display: flex
         align-items: center
         margin: 0
-        width 100%
-        margin-bottom 10px
-
+        position relative
+        padding-left 50px
 
         @media(max-width 992px) 
             width: 100%
@@ -234,17 +246,25 @@
             margin-bottom: 10px
 
         &:after
-            content: 'Calcule seu Frete'
+            content: 'Digite seu CEP:'
             font-size: 15px
             text-transform: none
             font-weight: 600
             color: #353535
 
- 
+        &:before
+            content:''
+            display inline-block
+            width 48px
+            height 26px
+            position: absolute;
+            left: 0;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAaCAMAAADG6y/lAAABblBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAcCckUAAAAenRSTlMADNr//W8wsIhgzkDEPSgH9Kh40Nn6ZeM0uiAlP4bz/ktBj5BqZ5QPJObhBAH8yRVOVdPgnInRC6L4OofkT5uyA4DwvKwGI6WScXpXrb9rz+9d3Ou5PMigjoTYs+7owC75ECLSWO216lrfgTUfuIvimH7GTGbLwwrUOIWMoBsAAAFaSURBVHjajdLnUsJgEIbRxRelqYCAvQL2AGoUC1ETFCxYsYO9917v3gQxE8gHw/n/7MzuLKkMZWAzlhNTBQoxFQzMFgZrkcBGDCZU2mRV1faSgyyHs5qyalwyd8FA5amlP3X4U88OGhplTc0trWhrp4wOr0/hp6zOrm5NoC7d04u+fmLgAgiGGAENAIPE4gWGQoyA4zFMIy69MORiVB/QGKw0jgImGEEEAk369KYATIuMQEKUGMQZYDZGpQdxYE6kYoHFlDH/f+SFRZGKBoK6pw47SCzJ85cBWwlB/rdyK6trwfX8wGBObmxuMYNhKKTcwL4NmXFSF+xIu4BVciOwJ6lSSDmBdGQfB9KhNjhCxvEJnULnjKNzKC5IFbvkef5CCeLAFa/lUIJroI6/uaVcd0C4JYnAPWn5gYfHKJ5E0nuG4oVy2F8h87wRA/f+IXwmKM/X7beQ/iHFL+2QO5uYW0jgAAAAAElFTkSuQmCC")no-repeat;
 
     .details-content 
         display: flex!important
         align-items: center
+        flex-wrap wrap
         padding: 0
         position relative
 
@@ -257,18 +277,21 @@
 
     #txtCalculaFreteProduto
         margin: 0 
-        width 159px
+        width 140px
         text-align: left
         height 40px
         border: 1px solid #E8E8E8
         border-radius: 1px
-        width 50%
+        margin-left 15px
 
         @media(max-width 992px)
             width 100%
             margin-bottom 10px
 
     #btnCalculaFreteProduto
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 0
         width 48px
         height 40px 
@@ -279,12 +302,25 @@
         height 40px
         font-size: 14px!important
         font-weight: 700!important
+        padding 0 20px
 
         @media(max-width: 991px)
             width 100%
 
     a#naoSeiCep 
-      display: none
+        display: block  
+        font-size: 11px
+        line-height 1
+        font-weight 400
+        color #adadad
+        position: absolute;
+        bottom: 0;
+        left: 50px;
+
+        @media(max-width: 992px)
+            position relative
+            margin-top 15px
+            bottom auto
 
 
 .product__price-other
@@ -484,13 +520,15 @@
 
     @media(max-width: 992px)
         justify-content: center
+        margin-bottom 25px
  
 .carrinhoInputBlock
     float: none
     border none
     padding 0
     margin 0
-
+    display flex!important
+    
 .addthis_inline_share_toolbox 
     margin-top: 75px
 
@@ -538,6 +576,7 @@ div#divGrupoProduto ul:nth-child(3)
         cursor pointer
         font-weight: 700
         text-shadow:  0 0
+       
 
     &:hover
         color: #fff
@@ -581,6 +620,9 @@ div#divGrupoProduto ul:nth-child(3)
         border-bottom: 1px solid #e7e7e7
         padding-bottom: 1.25rem
         margin-bottom: 15px
+
+      
+
     p
         font-size: 15px
         line-height: 17px
@@ -629,3 +671,26 @@ div#divGrupoProduto ul:nth-child(3)
                 background-position: center
                 padding: 0
                 margin-left: 5px
+
+ .quantity
+    position relative
+
+.quantity__button 
+    position absolute
+    width 38px
+    height 100%
+    background transparent
+
+    &--more
+        right 0
+        
+    
+    &--less
+        left 0
+
+
+
+
+product__frete
+    @media(max-width 992px)
+        margin-top 24px

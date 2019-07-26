@@ -15,7 +15,7 @@ define(['jquery', 'slick-carousel'], ($) => {
                         {
                             breakpoint: 500,
                             settings: {
-                                slidesToShow: 1,
+                                slidesToShow: 3,
                                 vertical: false,
                                 dots: true
                             }
@@ -23,7 +23,7 @@ define(['jquery', 'slick-carousel'], ($) => {
                         {
                             breakpoint: 993,
                             settings: {
-                                slidesToShow: 1,
+                                slidesToShow: 4,
                                 vertical: false,
                                 dots: true
                             }
@@ -32,7 +32,7 @@ define(['jquery', 'slick-carousel'], ($) => {
                             breakpoint: 375,
                             settings: {
                                 vertical: false,
-                                slidesToShow: 1,
+                                slidesToShow: 2,
                                 dots: true
                             }
                         },
@@ -73,7 +73,7 @@ define(['jquery', 'slick-carousel'], ($) => {
             // }
         },
         quantity(option) {
-            const selectQuantity = $('.product__buys select#item-quantidade-1');
+            const selectQuantity = $('.product__price select#item-quantidade-1');
 
 
             if(option) {

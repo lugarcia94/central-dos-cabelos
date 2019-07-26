@@ -7,9 +7,21 @@
 
     @media(max-width: 1250px)
         max-width 24%
+    
+    @media(max-width: 992px)
+        max-width 100%
+        margin: 0
+        margin-top 20px
+
+    @media(max-width: 767px)
+        max-width 100%
+
 
     .product__details-topo
         flex: 1 1 356px
+        
+        @media(min-width : 1024px)
+            margin-right 15px
 
         @media(max-width: 992px)
             display: flex
@@ -67,14 +79,6 @@
 
     .left__prod
         padding-top 15px
-
-    @media(max-width: 991px)
-        max-width 45%
-        margin: 0
-        margin-top 20px
-
-    @media(max-width: 767px)
-        max-width 100%
 
     .produtoInfo-title
         display: inline-block
@@ -238,6 +242,7 @@
         width: 16%
         text-transform: lowercase
         font-weight: 700 
+       
 
     #naoSeiCep
         position: absolute
@@ -248,10 +253,8 @@
         font-weight: 700
         text-transform: none
 
-        @media(max-width: 767px)
-            left 50%
-            transform: translateX(-50%)
-            text-align: center
+    
+                 
 
     .summary
         display: none
@@ -449,4 +452,3 @@
 .produto .fbits-avaliacao
     @media(max-width: 767px)
         width 100%
-

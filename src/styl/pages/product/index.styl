@@ -304,8 +304,8 @@
                 overflow: hidden
                 cursor: pointer
                 transition: all 300ms ease-in-out  
-                width: 95px!important
-                height 40px!important 
+                width: 45px!important
+                height 45px!important 
                 margin: 0
                 padding: 0
                 border: none!important
@@ -344,11 +344,10 @@
             .valorAtributoFoto
                 // border: none !important
                 background: transparent
-                width: 50px
-                height: auto
-                background-size: auto 40px !important
+                width: 45px
+                height: 100%
+                background-size: auto 45px !important
                 background-position: top center !important
-                margin-top: 10px
                 position relative 
                 display: block
 
@@ -865,20 +864,7 @@ div#fbits-avaliar-produto
             &:first-child
                 display: block
 
-.product__offer
-    max-width 300px
-    width 100% 
-
-    @media(max-width: 1250px)
-        max-width 25%
-
-    @media(max-width: 991px)
-        max-width 45%
-        margin: 0
-
-    @media(max-width: 767px)
-        max-width 100%
-     
+ 
 @media(min-width: 992)
     .product--item-container > div:last-child 
         display: none
@@ -1408,3 +1394,11 @@ section.showcase__one.showcase__list .showcase__container
     flex-wrap wrap
 .center
     max-width none
+
+.errosFrete.error
+    position absolute
+    top 100%
+    left 50%
+    transform: translateX(-50%)
+    padding 0
+    margin-top 5px

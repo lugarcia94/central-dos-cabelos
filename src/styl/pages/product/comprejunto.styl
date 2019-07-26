@@ -292,9 +292,13 @@ a#btnContinuarComprando
     clear: both
     content: ''
 
+
+.divPaiCarrosselCompreJunto
+    height auto
+
 .compre__junto-wrapper
     max-width 955px
-    margin-top 50px
+    margin 30px 0
 
     @media(max-width: 1300px)
         max-width 70%
@@ -436,7 +440,7 @@ a#btnContinuarComprando
         float: none
  
 
-            
+        
 
     [data-atributoselecionado="True"]
         border: 1px solid $cor01 !important
@@ -479,6 +483,14 @@ a#btnContinuarComprando
             @media(max-width: 1100px)
                 display: flex
                 width: 100%
+    
+    .fbits-comprejunto1,
+    .fbits-comprejunto2
+        width  auto
+
+    .fbits-comprejunto2
+        flex 1 1 auto 
+        min-width 0
 
 .divisor
     @media(max-width 768px)
