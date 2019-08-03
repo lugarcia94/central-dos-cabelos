@@ -95,7 +95,7 @@
             display: block
             transition: all .3s
             max-width 100%
-            @media(max-width : 767px)
+            @media(max-width : 991px)
                 margin: 0 auto
             &:hover
                 transform: scale(1.1)
@@ -124,6 +124,15 @@
             align-items: center
             position relative
 
+            @media(max-width 991px)
+                display: flex!important
+                justify-content center
+
+                img
+                    margin 0 auto
+                    left 0
+                    transform none
+
             &:after
                 content: ''
                 width 1px
@@ -148,6 +157,9 @@
     max-width 1330px
     padding 0 15px
     margin 50px auto
+
+    @media(max-width 991px)
+        display none
 
     span
         font-size 25px

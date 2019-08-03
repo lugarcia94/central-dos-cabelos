@@ -94,11 +94,11 @@ $ico-before
         align-items: center
     &--icon
         display: block
-        width: 13px
-        height 15px
+        width: 30px
+        height 30px
         margin-right: 3px
-        background-image svg-inline(user)
-        background-size: auto
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAdCAMAAACOj/wDAAABa1BMVEUAAADtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVPtOVObkTcPAAAAeXRSTlMAEm+66Pv85LhsEAR49P/xcwMPv8hlIgcIJWrPuQzG8FMBYPa7kewpNfJ9Kv5KWvcXx9tZaMEc7wsTHuc+TdiolqGZSfggO8LDBgrOI+0VG8k363B5NvX9y66wObL5qy2dhWmDwIqGlL0N5TNDtwInMFx2Y3GxJNzV2MfrIgAAAT9JREFUeAF9kPk3AmEYRt9kQlNPFMpSo6TQ2LMUsi9EWshCFrIo+/7nOznNzPdluD/d59wzc94ZUjFUGasFU01tnZkqES1WlLHVN/DN7gAam5qdrpbWNqDdzTanB1JH2b2+TvhFJnYhENRWdw96tRWS0UcM/RgYZB40Eot3CBZ1DGOEOMIYVdQlY4yPQYwragZEPhoARSeACB+jEFSfxBQfpxFTfQazfJzDvOoLWFxiW8iEZe27VrC6prX1OPyksbEJR0IZW0kEuBelJKQzhpIltiVIKeLYyQK7e/sHcRnI8u3wSABD7vhEO+AUEIxn574fwhd5AfJl+UB7Erkr7hdFr2Xc3JZMzKNQpAru0rh/ICILbI/0iycrMkQRK55JhzACbnpBkvTwxvBKHvhIlze8kwkf+rGIAuEf6PPv9vUNgFAuacJJ90AAAAAASUVORK5CYII=');
+        background-size: 20px
         background-position: center
         background-repeat: no-repeat
 .header__mainbar-order
@@ -208,8 +208,10 @@ $ico-before
 @svg-load sino url("../assets/svg/sino.svg")
 
 @svg-load menumobile url("../assets/svg/menu-mobile.svg")
+    fill: $cor01
+
 .header__mainbar-mobile
-    background-image svg-inline(menumobile)
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAQlBMVEUAAADrO07tOlPtOVTvO1TrPVLuOlPuOlPuOlPuOlPuOlPuO1LuOlTuOlPvO1PtO1PuOlPuOVPuOlPuOlLuOlLuOlOXv7dZAAAAFXRSTlMAGlNVUhnd2/38o6FYqKpW9fTzp6SOH6DMAAAAWElEQVR42tXTMRaAIAwD0CigBUVA7f2v6g3SoS78tR368hr4LWsgYsKm1A412AuiVEbJdH5gCme9iNrQlRo/RD2UutHokU/AFF5RQor5cv6o7eKkaFTP7QPWTigvanuUqAAAAABJRU5ErkJggg==')
     background-size: auto
     background-position: center
     background-repeat: no-repeat
@@ -223,7 +225,7 @@ span.arrowmenu
 @svg-load consulta url("../assets/svg/consulta.svg")
 @svg-load arrowmenuclose url("../assets/svg/arrow-menu-close.svg")
 .header__mainbar-mobile-close
-    background-image svg-inline(arrowmenuclose)
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAe1BMVEUAAADwPlXuOlLuOVPuOlPrPVLzOlHuOlPuOlLwOlDtOlPuOlPrO07pN07uOVPuOlPuOlPuOlPuOVPtOVPyNlHuO1PwPFruOlPtOlPsOVXuOlPuOlPyQFnuOlPvOlPuOlTuOlPuOlPtOlTxOVXuOlLuOlPuOlPvOFDuOlMI/TGWAAAAKHRSTlMAIcD0sxkWsMMjvNgaF9XB7PKprRPREczaG9PXFNDZsfPCvSSn6rkgvXgysgAAAKxJREFUeNrVklkSgjAQBZ8i4AaI4L7vc/8TaoHWlHYu4PtK0Z1UMg91ulEvVjBJGvUHGprZaBziWf5ChSbmBrmVmpob5FapnrlBnifSfNEsl6uv+62bj5tYggEOA1xugMMAhwEOA/yT7a6dx/v9mdrwDO6n4ZwGOeaLqZO7QU6D/bbt7z/ts7+fXsD/9f/wfkPtx0qdh4yDjs5DRqmT85Bx1qUoq0TB1Nfb/fEEEhE7HKXul4IAAAAASUVORK5CYII=')
     background-size: auto
     background-position: center
     background-repeat: no-repeat
@@ -232,6 +234,7 @@ span.arrowmenu
     position absolute
     top: 0
     left 255px
+    background-size 25px
     @media(min-width : 992px)
         display: none
 

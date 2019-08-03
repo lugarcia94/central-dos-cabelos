@@ -85,7 +85,7 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                dots: true
+                dots: false
               }
             },
             {
@@ -93,7 +93,7 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                dots: true
+                dots: false
               }
             }
         ]
@@ -173,3 +173,29 @@ $( document ).ajaxComplete(function(event, xhr, settings) {
     $(".popUp-News input#btnCadastrarNews").attr("value", "QUERO GANHAR!")
   }
 });
+
+if ($(window).width() < 992){
+  $('.full__banner-list').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+  });
+
+  $('.mini-banner .mini-banner__wrapper').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false
+  });
+
+  $('.mini-footer .mini-footer__banners').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false
+  });
+}

@@ -181,16 +181,12 @@
     .slick-next
         @media(max-width : 1360px)
             right 0
-        @media(max-width : 991px)
-            width: 30px
-            height 30px
+        @media(max-width : 991px) 
             top: 30%
     .slick-prev
         @media(max-width : 1360px)
             left 0
-        @media(max-width : 991px)
-            width: 30px
-            height 30px
+        @media(max-width : 991px) 
             top: 30%
     
     .slick-dots
@@ -250,6 +246,9 @@ span[id^="fbits-grupo"], .fbits-componente-ofertasPorDepartamento, .row-vitrine-
         width 25%
         margin-bottom 20px
 
+        @media(max-width: 991px)
+            width 50%
+
 section.showcase.instagram
  
     h1
@@ -260,6 +259,8 @@ section.showcase.instagram
             width: 30px
             height: 24px
             background-repeat: no-repeat
+            @media(max-width: 991px)
+                display none
             
         strong  
             color $cor01

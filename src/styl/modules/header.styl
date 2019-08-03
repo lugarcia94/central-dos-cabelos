@@ -13,6 +13,7 @@
         
         @media(max-width : 991px)
             order: 1
+            display none
         &-container
             max-width: 1330px
             padding: 0 15px
@@ -22,9 +23,10 @@
             align-items: center
             justify-content: space-between
             min-height 60px
+ 
 
-            @media(max-width : 1249px)
-                justify-content: flex-end
+       
+ 
 
             ul
                 display flex
@@ -131,6 +133,8 @@
         z-index: 1
         width: 100%
         border: 1px dashed #464646
+
+            
         
  
         &-container
@@ -144,33 +148,32 @@
             align-items: center
             justify-content: space-between
             min-height: 100px
+            
             @media(max-width : 991px)
                 flex-wrap: wrap
+
+                .menu   
+                    display none!important
         &-mobile
             display: none
             @media(max-width : 991px)
                 display: block
                 width: 27px
                 height 22px
+
+
         &-logo
             position: relative
             display: flex
             align-items: center
 
             @media(max-width : 991px)
-                width: 138px
-                min-width: 138px
-                height: 50px
-                margin: 0
-  
-            img 
-                display: block
-                width: auto
-                margin: 0
-                padding: 0
-                max-width: none
-                @media(max-width : 991px)
-                    height 80px
+                width 33%
+                justify-content center
+
+                a
+                    width 100%
+
         &-serach
             max-width: 280px
             width: 100%
@@ -229,9 +232,15 @@
             width 100%
             position relative
 
+            @media(max-width : 991px)
+                width auto
+
         &-links
             display: flex 
             align-items: center
+
+            @media(max-width : 991px)
+                display none
 
             &:after
                 content: ''
