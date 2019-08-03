@@ -1,6 +1,6 @@
 .footer
     &__informations
-        background: #F4F4F4
+        background: #fff
     &__container
         max-width: 1330px
         padding: 0 15px
@@ -20,20 +20,22 @@
         @media(max-width: 475px)
             padding-bottom: 60px
     &__title
-        color: #434343
-        font-size: 13px
+        color: $cor02
+        font-size: 14px
         font-weight: bold
         line-height: 16px
         text-transform: uppercase
         margin-bottom: 10px
     &__link
-        color: #434343
-        font-size: 13px
+        color: $cor02
+        font-size: 14px
         font-weight: 500
-        line-height: 20px
+        line-height: 30px
         transition: all .3s
         &:hover
             text-decoration: underline
+            color $cor01
+
     &__info
         display: block
         color: #434343
@@ -125,3 +127,62 @@
                 padding-top: 30px
 #headerLoginMaster
     display: none!important
+
+li.footer__item.footer__item--horary 
+    max-width: 270px
+    display flex
+
+    &:before
+        content: ''
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAMAAADjyg5GAAAAMFBMVEUAAADuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlOYFwGsAAAAEHRSTlMAIjOq/2bumXe7Ed2IzFVEOt4JqwAAAHFJREFUeAE9z0GSxSAIANEmIAqY5P63nYmWv1c8NhTsRPh1qf2n11Yz72N0t7YVSWtkfE4PoAoIT6bJodjkvjn85tJFB9CiYu3tFohC1z67Bbjy7HM8QrMHwl9W7zqZZVNAplXyWc3czTTPD6P3sT74A0s9AyY2T5R6AAAAAElFTkSuQmCC')
+        display block
+        width: 20px
+        height: 20px 
+        background-repeat: no-repeat
+        margin-right 5px
+
+
+        	
+
+li.footer__item.footer__item--telefone
+    display flex
+    align-items: center
+    margin-bottom 10px
+
+    &:before
+        content: ''
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAALVBMVEUAAADuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlMTvOtQAAAAD3RSTlMARHdVEd3/zO6IZpkiqrv56GaKAAAAYklEQVQI1yXJsQHDIAwAMAHGOITw/7kdqlWg9T7CX5u5VlUHI5/ArhcnRxw4tfmuNUEvakTmgcgmm/s/c8vm1I2+qeE+nJmZrWXYBf0+1kefAuKbwa3Kb++31sF8R/vmvBt+4dMC12VBfHgAAAAASUVORK5CYII=')
+        display block
+        width: 20px
+        height: 15px 
+        background-repeat: no-repeat
+        
+li.footer__item.footer__item--email
+    display flex
+    align-items: center
+    
+
+    &:before
+        content: ''
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAMAAABcOc2zAAAAJ1BMVEUAAADuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlPuOlNkYZCBAAAADXRSTlMARJkR/yJ3Zu6Iqsy74X932AAAAFNJREFUeNpVjEESwCAIA4NEser/31ukg2P3AiwEQMqFAMofisqGg7G66JKz9BDMm0aGeAaHAurlizRfTZHpTYodjldHQM0UKYYdigssXiw49QJ4AfbUAsES99zuAAAAAElFTkSuQmCC')
+        display block
+        width: 20px
+        height: 12px 
+        background-repeat: no-repeat
+	
+
+.footer__wrapper.colunm2 
+    border-top: 1px dashed #ccc
+
+.footer__copyright
+    background $cor02
+    border-top: 1px dashed #ccc
+    min-height 52px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    p
+        margin 0
+        font-size 12px
+        color #fff
