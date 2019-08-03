@@ -7,10 +7,10 @@
     display: flex
     flex-wrap: wrap
     &__topbar
-        background-color: #333333
-        padding: 12px 0
+        background-color: $cor01 
         width: 100%
         transition: all .3s
+        
         @media(max-width : 991px)
             order: 1
         &-container
@@ -21,8 +21,52 @@
             display: flex
             align-items: center
             justify-content: space-between
+            min-height 60px
+
             @media(max-width : 1249px)
                 justify-content: flex-end
+
+            ul
+                display flex
+                align-items: center
+
+                li
+                    margin 0 3px
+
+                span
+                    font-size: 13px
+                    color: #fffbfc
+                    margin-right: 10px
+
+            ul.telefone__mid 
+                li 
+                    color: #fff
+                    font-size: 13px
+                    font-weight: 600
+                    display: flex
+                    align-items: center
+
+                    img
+                        margin-right 5px
+
+                    &:last-child
+                        &:before
+                            content: '|'
+                            margin 0 10px 0 5px
+                            font-weight 300
+
+            .links__topbar
+                li
+                    &:last-child
+                        &:before
+                            content: '|'
+                            margin 0 10px 0 5px
+                            font-weight 300
+                            color: #fff
+                    a
+                        font-size 13px
+                        color: #fff
+
         &-list
             padding-left: 220px
             display: flex
@@ -82,22 +126,24 @@
             &--one
                 padding-right: 20px
     &__mainbar
-        background: #ffffff
+        background: $cor02
         position: relative
         z-index: 1
         width: 100%
-        @media(max-width : 991px)
-            background:  linear-gradient( #333333 50px, white 50px, white 100px, white 100px, white 150px, white 150px)
-            min-height: 80px
+        border: 1px dashed #464646
+        
+ 
         &-container
             max-width: 1330px
             padding: 0 15px
             width: 100%
             margin: 0 auto
+            
         &-wrapper
             display: flex
             align-items: center
             justify-content: space-between
+            min-height: 100px
             @media(max-width : 991px)
                 flex-wrap: wrap
         &-mobile
@@ -108,23 +154,15 @@
                 height 22px
         &-logo
             position: relative
-            height: 70px
-            width: 190px
-            min-width: 190px
-            margin-right: 35px
+            display: flex
+            align-items: center
+
             @media(max-width : 991px)
                 width: 138px
                 min-width: 138px
                 height: 50px
                 margin: 0
-            .headerLogo
-                position: absolute
-                float: none
-                width: auto
-                bottom: 0
-                left: 0
-                @media(max-width : 991px)
-                    top: 0
+  
             img 
                 display: block
                 width: auto
@@ -134,8 +172,9 @@
                 @media(max-width : 991px)
                     height 80px
         &-serach
-            max-width: 630px
+            max-width: 280px
             width: 100%
+            position relative
             @media(max-width : 991px)
                 max-width: 100%
                 order 1
@@ -146,24 +185,23 @@
                 width: 100%
                 float: none
                 margin: 0
-            input.inputSearch
-                border: 1px solid #E7E7E7
-                font-size: 15px
-                color: #BABABA
-                padding-left: 35px
-                &::placeholder
-                    font-size: 15px
-                    color: #BABABA
-            button#btnBusca.btSearch
-                background: #373535
+                opacity: 1
+                visibility: visible
+
+            input.inputSearch 
                 font-size: 13px
-                color: #FFF115
-                text-align: center
-                font-weight: 800
-                width: auto
-                height 100%
-                padding: 12px
-                transition: all .3s
+                color: #666666 
+
+                &::placeholder
+                    font-size: 13px
+                    color: #666666
+
+            button#btnBusca.btSearch
+                position absolute
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAolBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyApQp+MAAAANnRSTlMAE4DR+P3jnjJN772Hfqb+jgPNLA+V/50KhFYC0tZpJUopUTerBUPx7AtqNCpTrPCIDZcBk+2vVtspAAAAnElEQVR42l2M1w6DMBAETTEQYzocoQUS0nv9/1+LS4ylzMPuaaRbxDBMy8aO6yHFjGCfBiGJ4uQncJrxzgsohTBIOkeSCmpeJs7Ue9N2vCwfTSygZ2lTbTwYWOJAm6UYckJtVjCydEk+mTXZ8N+oUGILcjOGqpFitz+IIymhPZ7Olyvc4I4kdQcMQh/PSaF+qEc2+pJKIxT9V+/PFx1QCwGxbrgwAAAAAElFTkSuQmCC')
+                background-repeat: no-repeat
+                background-position: center
+
                 &:hover
                     color: #ffffff
                 .icon.isearch
@@ -182,6 +220,45 @@
                 border-bottom: 1px solid transparent
                 &:hover
                     border-bottom: 1px solid #fff115
+
+        &-right
+            display: flex
+            align-items: center
+            justify-content: space-between
+            max-width: 240px
+            width 100%
+            position relative
+
+        &-links
+            display: flex 
+            align-items: center
+
+            &:after
+                content: ''
+                color: #fff
+                position: absolute
+                border-right: 1px dashed #464646
+                width: 1px
+                height 50px
+                left 70% 
+
+                @media(max-width 991px)
+                    display none
+
+            img
+                margin-right 10px
+
+            span
+                font-size 13px
+                color: #ffffff
+                display: block
+
+                a
+                    display block
+                    color: $cor01
+                    text-decoration: underline
+                    font-weight: 600
+            
         &-cart
             padding-left: 10px
             @media(max-width : 991px)
@@ -192,27 +269,27 @@
                 position relative
                 a
                     float none
-                    display: flex
+                    display: flex!important
                     align-items: center
                 .icon.icart
                     display: none
                 .minicart-txt-itens
                     display: none
                 .minicart-qtde-itens
-                    width: 24px
-                    height 24px
-                    background: #EFEFEF
+                    width: 22px
+                    height 22px
+                    background: $cor01
                     display: flex
                     align-items: center
                     justify-content: center
                     padding: 0
                     border-radius: 50%
-                    color: #373535
+                    color: $cor02
                     font-size: 11px
                     font-weight: 800
                     float: none
                     position: absolute
-                    right: -2px
-                    top: -7px
+                    right: -8px
+                    top: 0
                     &:before, &:after
                         display: none
