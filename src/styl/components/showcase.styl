@@ -10,39 +10,39 @@
         width: 100%
         margin: 0 auto
     &__title
-        font-size: 35px
-        color: #434343
-        line-height: 32px
+        font-size: 25px
+        color: $cor02
+        line-height: 27px
         text-align: center
-        text-transform: uppercase
-        font-weight: 900
+        text-transform: none
+        font-weight: 800
         display flex
         align-items: center
-        justify-content: space-between
+        justify-content: center
         margin-bottom: 30px
-        &:before, &:after 
+        padding-bottom 10px
+        border-bottom 1px dashed #ccc
+        position relative
+
+        &:after
             content: ''
-            height 1px
-            background: #FFF115
-            display: block
-            width: 100%
-        @media(max-width : 767px)
-            font-size: 20px
-        span 
-            white-space: nowrap
-            padding: 0 12px
+            height 5px
+            background $cor01
+            width: 5%
+            position: absolute
+            bottom: 0
+
     &__list
         .spot
             width: 100%
-            max-width: 246px
+            max-width: 260px
             float: none
             margin: 0 auto
-            padding: 0 15px
-            border: 1px solid transparent
+            padding: 0   
+            border none
             @media(max-width : 991px)
                 padding: 5px
-            &:hover
-                border: 1px solid #CBCBCB
+            &:hover 
                 .botoesSpot
                     opacity 1
                     visibility: visible
@@ -97,7 +97,8 @@
                 display: none!important
         .fbits-spot-conteudo
             height auto
-            padding-bottom: 15px
+            padding-bottom: 15px 
+
         .spotPreco
             margin-top: 5px
         .precoDe
@@ -109,17 +110,17 @@
         .precoParcela
             display: none
         .precoPor
-            font-size: 18px
-            color: #373535
+            font-size: 20px
+            color: $cor01
             font-weight: 800
             line-height: 23px
             &:before
                 display: none
         .fbits-spot-preco-boleto-container
             font-size: 14px
-            color: #373535
+            color: $cor02
             line-height: 18px
-            font-weight: bold
+            font-weight: 600
             .fbits-spot-boleto-ou
                 margin-right: 3px
                 &:before
@@ -129,10 +130,10 @@
                 &:before
                     content: 'no boleto'
             .fbits-spot-boleto-valor
-                font-size: 21px
-                color: #FF5D5D
-                font-weight: 900
-                line-height: 26px
+                font-size: 14px
+                color: $cor02
+                font-weight: 700
+                line-height: 17px
         .spotImg
             img 
                 width: auto!important
@@ -140,19 +141,19 @@
                 margin: 0 auto
                 display: block
         .spotTitle
-            font-size: 12px
-            color: #434343
-            font-weight: bold
-            line-height: 15px
+            font-size: 14px
+            color: $cor02
+            font-weight: 600
+            line-height: 16px
             text-align: center
-            text-transform: uppercase
+            text-transform: none
             height 50px
             overflow hidden
         .botoesSpot
             display: block
             opacity 0
             visibility: hidden
-            height 30px
+            height 40px
             overflow hidden
             @media(max-width : 991px)
                 display: none
@@ -175,35 +176,17 @@
                         transition: all .3s
                         &:hover
                             background: #ffffff
-            a
-                color: #4AC87A
-                border: 1px solid #4AC87A
-                background: none
-                font-size: 12px!important
-                line-height: 30px!important
-                text-align: center
-                font-weight: bold
-                height 30px!important
-                float: none
-                transition: all .3s
-                width: 91.15%!important
-                &:hover
-                    color: #ffffff
-                    background: #4AC87A
+            
 
     .slick-next
         @media(max-width : 1360px)
             right 0
-        @media(max-width : 991px)
-            width: 30px
-            height 30px
+        @media(max-width : 991px) 
             top: 30%
     .slick-prev
         @media(max-width : 1360px)
             left 0
-        @media(max-width : 991px)
-            width: 30px
-            height 30px
+        @media(max-width : 991px) 
             top: 30%
     
     .slick-dots
@@ -219,3 +202,73 @@
             width: 14px
             height: 14px
             background: #FFF115
+
+
+.spot .bt.comprar
+    color: #fff
+    background: $cor02
+    font-size: 0 
+    line-height: 40px!important
+    text-align: center
+    font-weight: 500
+    height 40px!important
+    float: none
+    transition: all .3s
+    width: 100%!important
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAMAAAC3SZ14AAABDlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8v3yHCAAAAWnRSTlMAQMb99aUYPvqxUGPb2g3DtwEX8XH3s6YJIP90uh68a92RMH6/0ov2YR8DywxJj+8/mbsmMTmD1TsZautW/gRTBek6G4XTJDWbuQpKtaNlinrlc8WVkKqpwG0I50RoAAAAvElEQVQYGQXBMUoDYRQGwPn+fbuboJWICBYWoqBoK9hZeQVv6gFs04tVUqR3ITaiZONMgCRJfkHAmCRJdlBgkUxOEtDA8Dfx1XUgzkMyo7NXW82QxCFJ5jnZXyptjJ/lAc2sizLm8/bHmrs4fJxN2v13r3eMYZoGFw/aaDQejVi3ttb3qtdbgd0OFa2uegDoN89tW+8A0OnqOgCgVFUAQKmqAIC36tqmAQDLVjcBAF6SxekTAFg95jUAgPwDLCclWPh/hxYAAAAASUVORK5CYII=')!important
+    background-repeat: no-repeat
+    background-position: 95%
+
+    &:before
+        content: 'Quero este!'
+        font-size: 15px 
+        text-transform : uppercase
+        font-family 'Montserrat'
+        letter-spacing: 1px 
+        margin 0
+ 
+ 
+
+.spot .spotContent a
+    text-decoration none
+
+span[id^="fbits-grupo"], .fbits-componente-ofertasPorDepartamento, .row-vitrine-home.estatico.custom-list .center
+    display block!important
+
+.showcase__list.not-carousel
+ > span 
+    display: flex!important
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+    .showcase__item
+        width 25%
+        margin-bottom 20px
+
+        @media(max-width: 991px)
+            width 50%
+
+.spot .spotPreco .precoDeVazio
+    display none
+section.showcase.instagram
+ 
+    h1
+        &:before 
+            content: ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAMAAAA4Nk+sAAAAUVBMVEUAAADvOFDvOVHvMFDtOlLuOlLuOlPvOlDuOVLuOVLuOVLuOlLuOlPvOFLvOVLvOVPuOlPvOFTuOVPvOFPuOVPtOVPtOlLtOVPuOVPtOVLvOlJySMVuAAAAG3RSTlMAID8Qn+//MN/gwNDPYHBQsECvX/CggJC/j3+wTu5FAAAAxklEQVR4AV3PW3KsMAyE4dYRtC+MzZhjLsn+FxqVyVB2vrf+H1QlNPLvIfil08zOPCmM82SIj0B6Z3lhFHQk8gUkBkUnrxqY8GYaKimJb0QWwKRtnrf/cHVBYUSlWtSNzdYGCRJmZ02qqXKC+WRhFRiplC4fPNGcPIac0eQxt2WOIRd6hVHP0mUsvASQiwv6LIF8XWSQO3++1J1mV5jCaHnFrRTcVsuZF/6IzNDKLwxOVgVW0k/fj8nzPusWDoLDzaXjkVv8Af4eCx7xPwg2AAAAAElFTkSuQmCC')
+            display: block
+            width: 30px
+            height: 24px
+            background-repeat: no-repeat
+            @media(max-width: 991px)
+                display none
+            
+        strong  
+            color $cor01
+            font-weight: 800
+
+            &:before
+                content: '@'
+                
+

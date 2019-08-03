@@ -63,12 +63,13 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 7000
+        autoplaySpeed: 5000,
+        arrows: false
     });
 
-    $('.showcase .showcase__list > span').slick({
-        slidesToShow: 5,
-        slidesToScroll: 5,
+    $('.showcase .showcase__list:not(.not-carousel) > span').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
         autoplay: false,
         autoplaySpeed: 2000,
         responsive: [
@@ -84,7 +85,7 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                dots: true
+                dots: false
               }
             },
             {
@@ -92,7 +93,7 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                dots: true
+                dots: false
               }
             }
         ]
@@ -115,7 +116,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.btNews').attr('value', 'QUERO APROVEITAR');
+    $('.btNews').attr('value', 'QUERO ME CADASTRAR');
 
     $( ".botoesSpot .spotTelevendas" ).each(function() {
         $(this).closest(".spot").addClass("spot__request");
@@ -172,3 +173,29 @@ $( document ).ajaxComplete(function(event, xhr, settings) {
     $(".popUp-News input#btnCadastrarNews").attr("value", "QUERO GANHAR!")
   }
 });
+
+if ($(window).width() < 992){
+  $('.full__banner-list').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+  });
+
+  $('.mini-banner .mini-banner__wrapper').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false
+  });
+
+  $('.mini-footer .mini-footer__banners').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false
+  });
+}
