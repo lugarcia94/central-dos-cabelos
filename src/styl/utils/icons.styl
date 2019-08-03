@@ -166,18 +166,21 @@ $ico-before
 
 @svg-load right url("../assets/svg/arrow-right.svg")
 @svg-load left url("../assets/svg/arrow-left.svg")
+
 .slick-prev.slick-arrow
-    background-image svg-inline(left)!important
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAMAAACf4xmcAAAAulBMVEUAAAAbHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0oKirJyspaXFwbHR0bHR3MzMz////39/dWV1cbHR1sbm79/f1UVlby8/NMTk55enobHR0bHR3v7+9DRUWCg4Pt7e2/wMDa29uBgoLw8PB4eXkbHR0bHR0bHR0bHR0bHR0bHR0bHR10QQsDAAAAPnRSTlMACUuNu+Hw/0wrnSoZpv1Z8VoBjqCiA5NYGhul////nAr/////8v///////7zg////////////j5ChkVue4oLrGhcAAAESSURBVHgBndRnV/IwHAXwC4Xetg+UPK2iiAODcSjuoQy+/9dyeKTNSE/09/qenCT/gb9otaNON2bc7URJCx5pFrMSZ//g0Ovn1OX9HkwDQZv4D01R0q0s6qkt+mwPsRHRbwc/dtlkgG8jwSZiD1/GbDbGpzRnszzFh4x1+weHNB0BmAjWHcvpCQ1qArSpOT2T03MaEiCilbu4pC4COjRcSSs3A67pyN3csq4LCFrupLzXcgqgw4OUj6xznvZkn+a+27N1N+ulL86XBv5bElaFiQqqaUCHZMH9FtC9/V/NAgZBkwW80u8NG8WcPvMCleGCboshNEtFm1rCNHLstxEc0pViRa1SeLSScrYWFOtZqe/edz1xLmgk3eyCAAAAAElFTkSuQmCC')
     background-size: auto!important
     background-position: center!important
     background-repeat: no-repeat!important
+    transform: scale(-1)
+    margin-top: -20px
     width: 40px
     height 40px
     z-index: 9
     &:before
         display: none
 .slick-next.slick-arrow
-    background-image svg-inline(right)!important
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAMAAACf4xmcAAAAulBMVEUAAAAbHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0bHR0oKirJyspaXFwbHR0bHR3MzMz////39/dWV1cbHR1sbm79/f1UVlby8/NMTk55enobHR0bHR3v7+9DRUWCg4Pt7e2/wMDa29uBgoLw8PB4eXkbHR0bHR0bHR0bHR0bHR0bHR0bHR10QQsDAAAAPnRSTlMACUuNu+Hw/0wrnSoZpv1Z8VoBjqCiA5NYGhul////nAr/////8v///////7zg////////////j5ChkVue4oLrGhcAAAESSURBVHgBndRnV/IwHAXwC4Xetg+UPK2iiAODcSjuoQy+/9dyeKTNSE/09/qenCT/gb9otaNON2bc7URJCx5pFrMSZ//g0Ovn1OX9HkwDQZv4D01R0q0s6qkt+mwPsRHRbwc/dtlkgG8jwSZiD1/GbDbGpzRnszzFh4x1+weHNB0BmAjWHcvpCQ1qArSpOT2T03MaEiCilbu4pC4COjRcSSs3A67pyN3csq4LCFrupLzXcgqgw4OUj6xznvZkn+a+27N1N+ulL86XBv5bElaFiQqqaUCHZMH9FtC9/V/NAgZBkwW80u8NG8WcPvMCleGCboshNEtFm1rCNHLstxEc0pViRa1SeLSScrYWFOtZqe/edz1xLmgk3eyCAAAAAElFTkSuQmCC')
     background-size: auto!important
     background-position: center!important
     background-repeat: no-repeat!important

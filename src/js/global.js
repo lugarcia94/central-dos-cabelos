@@ -67,9 +67,9 @@ $(document).ready(function(){
         arrows: false
     });
 
-    $('.showcase .showcase__list > span').slick({
-        slidesToShow: 5,
-        slidesToScroll: 5,
+    $('.showcase .showcase__list:not(.not-carousel) > span').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
         autoplay: false,
         autoplaySpeed: 2000,
         responsive: [
@@ -116,7 +116,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.btNews').attr('value', 'QUERO APROVEITAR');
+    $('.btNews').attr('value', 'QUERO ME CADASTRAR');
 
     $( ".botoesSpot .spotTelevendas" ).each(function() {
         $(this).closest(".spot").addClass("spot__request");
