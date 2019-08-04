@@ -88,8 +88,8 @@ define(['jquery', 'slick-carousel'], ($) => {
                 selectQuantity.each(function(){
                     const inputQuantity = $(`<input id='item-quantidade-1' value='1' type='text' min='1' max='999' class='qtdProduto quantity__input'>`);
                     const container = $('<div class="quantity">');
-                    const buttonMore = $('<button type="button" class="quantity__button quantity__button--more">+</button>');
-                    const buttonLess = $('<button type="button" class="quantity__button quantity__button--less">-</button>');
+                    const buttonMore = $('<button type="button" id="maisQtd" class="quantity__button quantity__button--more"><svg  viewBox="0 0 12 6" width="12" height="6"><style>tspan{white-space:pre}.shp0{fill: #bfbfbf}</style><path id="mais" class="shp0" d="M0 6L6 0L12 6"/></svg></button>');
+                    const buttonLess = $('<button type="button" id="menosQtd"  class="quantity__button quantity__button--less"><svg  viewBox="0 0 12 7" width="12" height="7"><style>tspan{white-space:pre}.shp0{fill: #bfbfbf}</style><g id="bloco 1"><g id="qtd"><g id="1"><path id="menos" class="shp0" d="M12 1L6 7L0 1"/></g></g></g></svg></button>');
                     
                     container
                         .append(buttonLess)
@@ -103,6 +103,32 @@ define(['jquery', 'slick-carousel'], ($) => {
             }
         }
     }
+
+    function productQty(parent) {
+        parent.on('click','#maisQtd', function(i){
+            let qtd   = $(this).closest('.clear').find('.qtdProduto');
+            let valor = parseInt( qtd.val() ) + 1;
+            qtd.val( valor );
+        });
+        parent.on('click','#menosQtd', function(){
+            let qtd   = $(this).closest('.clear').find('.qtdProduto');
+            let valor = parseInt( qtd.val() ) - 1;
+            if(valor <=0){
+                valor = 0
+            }else{
+                qtd.val(valor);
+            }
+        });
+    
+        $( parent.find('.qtdProduto') ).keyup(function(e) {
+            validar(this, 'num');
+        });
+    }
+
+
+    productQty( $('[id*="produto-variante"]') );
+    
+
 
     // Brand Label
     const brandImage = $('.product__brand img');

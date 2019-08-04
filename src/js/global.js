@@ -1,58 +1,62 @@
+$(document).ready(function () {
 
-$(document).ready(function(){
-    
-    if( $(".category__products >span").length){
-      $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
-      $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
-      $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
+    if ($(".category__products >span").length) {
+        $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
+        $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
+        $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
     }
 
-    $('.short__description a').on('click', function(e) {
-      e.preventDefault();
-      var id = $(".descricao__produto"),
-      targetOffset = $(id).offset().top;
-          
-      $('html, body').animate({ 
-          scrollTop: targetOffset - 120
-      }, 500);
-    });  
+    $('.short__description a').on('click', function (e) {
+        e.preventDefault();
+        var id = $(".descricao__produto"),
+            targetOffset = $(id).offset().top;
+
+        $('html, body').animate({
+            scrollTop: targetOffset - 120
+        }, 500);
+    });
 
     $(".newsletter-box input#Nome").attr("placeholder", "Seu nome aqui");
     $(".newsletter-box input#Email").attr("placeholder", "Seu e-mail aqui");
 
-    $( ".category__btn-mobile" ).click(function() {
-      $('body').addClass('filter__open');
+    $(".category__btn-mobile").click(function () {
+        $('body').addClass('filter__open');
     });
 
-    $( ".category__filter-close" ).click(function() {
-      $('body').removeClass('filter__open');
+    $(".category__filter-close").click(function () {
+        $('body').removeClass('filter__open');
     });
 
-    $( ".header__mainbar-mobile" ).click(function() {
-      $('body').addClass('menu__open');
+    $(".header__mainbar-mobile").click(function () {
+        $('body').addClass('menu__open');
     });
-    
-    $( ".header__mainbar-mobile-close" ).click(function() {
-      $('body').removeClass('menu__open');
+
+    $(".header__mainbar-mobile-close").click(function () {
+        $('body').removeClass('menu__open');
     });
+
+    if (jQuery('.fbits-categoria').length) {
+        $(".categoria__name-span").append(Fbits.Categoria.Nome);
+    }
+
 
     $('body').addClass('active__body');
 
-    $( document ).ajaxComplete(function() {
-        if(jQuery('.minicart-qtde-itens').is(':empty')) {
+    $(document).ajaxComplete(function () {
+        if (jQuery('.minicart-qtde-itens').is(':empty')) {
             jQuery('.minicart-qtde-itens').append('0');
         }
     });
 
-    $('.header__navbar-wrapper .menu >li').each(function(){
+    $('.header__navbar-wrapper .menu >li').each(function () {
         var list = $(this).find('>ul').html();
 
-        if($(this).find('>ul').length){
+        if ($(this).find('>ul').length) {
             $(this).append('<div class="menu__dropdow"><div><ul class="menu__list"> ' + list);
             $(this).find('>ul').remove();
 
-            if($(this).find('>a img').length){
-                $(this).find('.menu__dropdow').append('<div class="menu__image"><a href="'+this.children[0]+'">'+ $(this).find('>a').html() +'</a></div>');
+            if ($(this).find('>a img').length) {
+                $(this).find('.menu__dropdow').append('<div class="menu__image"><a href="' + this.children[0] + '">' + $(this).find('>a').html() + '</a></div>');
                 $(this).find('>a img').remove();
             }
         }
@@ -72,29 +76,28 @@ $(document).ready(function(){
         slidesToScroll: 4,
         autoplay: false,
         autoplaySpeed: 2000,
-        responsive: [
-            {
-              breakpoint: 1100,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4
-              }
+        responsive: [{
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                dots: false
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: false
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                dots: false
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false
+                }
             }
         ]
     });
@@ -118,84 +121,83 @@ $(document).ready(function(){
 
     $('.btNews').attr('value', 'QUERO ME CADASTRAR');
 
-    $( ".botoesSpot .spotTelevendas" ).each(function() {
+    $(".botoesSpot .spotTelevendas").each(function () {
         $(this).closest(".spot").addClass("spot__request");
     });
 
-    if ($(window).width() < 1250){
+    if ($(window).width() < 1250) {
         $('.header__topbar-list').slick({
             slidesToShow: 2,
             slidesToScroll: 2,
             autoplay: true,
             autoplaySpeed: 2000,
             arrows: false,
-            responsive: [
-                {
-                  breakpoint: 1030,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
+            responsive: [{
+                    breakpoint: 1030,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 },
                 {
-                  breakpoint: 992,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    arrows: true
-                  }
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        arrows: true
+                    }
                 },
                 {
-                  breakpoint: 650,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    arrows: true
-                  }
+                    breakpoint: 650,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        arrows: true
+                    }
                 },
                 {
-                  breakpoint: 490,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true
-                  }
+                    breakpoint: 490,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: true
+                    }
                 }
             ]
         });
     }
 });
 
-$( document ).ajaxComplete(function(event, xhr, settings) {
-  if( settings.url.indexOf("CadastroNews") >= 0 ){
-    $(".popUp-News input#modal-Nome").attr("placeholder", "Seu nome aqui")
-    $(".popUp-News input#modal-Email").attr("placeholder", "Seu e-mail aqui")
-    $(".popUp-News input#btnCadastrarNews").attr("value", "QUERO GANHAR!")
-  }
+$(document).ajaxComplete(function (event, xhr, settings) {
+    if (settings.url.indexOf("CadastroNews") >= 0) {
+        $(".popUp-News input#modal-Nome").attr("placeholder", "Seu nome aqui")
+        $(".popUp-News input#modal-Email").attr("placeholder", "Seu e-mail aqui")
+        $(".popUp-News input#btnCadastrarNews").attr("value", "QUERO GANHAR!")
+    }
 });
 
-if ($(window).width() < 992){
-  $('.full__banner-list').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: true,
-  });
+if ($(window).width() < 992) {
+    $('.full__banner-list').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: true,
+    });
 
-  $('.mini-banner .mini-banner__wrapper').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false
-  });
+    $('.mini-banner .mini-banner__wrapper').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false
+    });
 
-  $('.mini-footer .mini-footer__banners').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false
-  });
+    $('.mini-footer .mini-footer__banners').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false
+    });
 }

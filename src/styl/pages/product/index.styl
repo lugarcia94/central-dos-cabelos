@@ -429,22 +429,27 @@
             position relative
             z-index 1
             font-size: 25px
-            line-height: 30px
-            color: #333333
-            font-weight: 700
+            color: $cor02
+            line-height: 27px
             text-align: center
-            padding-bottom 5px
+            text-transform: none
+            font-weight: 800
+            display flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 30px
+            padding-bottom 10px
+            border-bottom 1px dashed #ccc
+            position relative
 
-            &::before
-                content ''
-                position absolute
-                top 100%
-                left 50%
-                transform translateX(-50%)
-                display block
-                width: 73px
-                height: 5px
-                background-color: #ee3a53
+            &:after
+                content: ''
+                height 5px
+                background $cor01
+                width: 5%
+                position: absolute
+                bottom: 0
+
 
             .fbits-conteudo-item
                 position: relative

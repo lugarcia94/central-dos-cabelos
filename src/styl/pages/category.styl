@@ -11,7 +11,7 @@
             justify-content: space-between
             flex-wrap: wrap
             padding: 35px 0
-            border-bottom: 1px solid #E7E7E7
+
     &__breadcrumb
         >ol
             display: inline-block
@@ -39,15 +39,20 @@
         color: #333333
         font-weight: 500
         line-height: 16px
+
     &__ordenation
+        display flex
+        justify-content: flex-end;
+
         .fbits-ordenar
             display: flex
             align-items: center
         .fbits-ordenar-por
-            font-size: 13px
-            color: #333333
-            line-height: 16px
-            text-transform: none
+            font-size: 14px;
+            line-height: 30px;
+            color: #333333;
+            font-weight: 700;
+            text-align: right;
             white-space: nowrap
         select 
             height 30px
@@ -63,21 +68,21 @@
         .fbits-paginacao > ul
             a
                 display: inline-block
-                width: 30px
-                height 30px
-                line-height: 30px
+                width: 35px
+                height 35px
+                line-height: 35px
                 text-align: center
-                font-size: 14px
+                font-size: 16px
                 color: #373535
-                font-weight: 500
-                background: #F4F4F4
-                margin: 0 1px
+                font-weight: 400
+                background: white
+                margin: 0
+                border: 1px solid #d9d9d9;
             li
                 display: inline
                 &.sel a
-                    font-weight: bold
                     color: #ffffff
-                    background: #373535
+                    background: #111111
 
     &__list
         &-container
@@ -89,40 +94,51 @@
             display: flex
             align-items: flex-start
             justify-content: space-between
+
     &__filter
         max-width: 220px
         width: 100%
+
         &-close
             display: none
+
         &-selected
             padding-top: 30px
+
         .fbits-filtro-pai
             margin: 0
-            border-bottom: 1px solid #E7E7E7
             padding: 25px 0
+            border none
+
+            &:first-child
+                padding-top 0px
 
         .fbits-filtro-titulo-pai
             font-size: 20px;
-            font-weight: bold;
-            line-height: 1.5;
-            text-align: left;
-            color: #333333
+            color: $cor02
+            line-height: 27px
+            text-align: left
             text-transform: none
-            margin-bottom: 10px
-            padding-bottom 5px
+            font-weight: 800
+            display flex
+            align-items: center
+            justify-content: flex-start
+            margin-bottom: 30px
+            padding-bottom 10px
+            border-bottom 1px dashed #ccc
             position relative
 
             &:after
-                display: none
-            
-            &:before
-                content: '';
-                position: absolute;
-                top: 100%;
-                display: block;
-                width: 4.56rem;
-                height: 0.31rem;
-                background-color: #ee3a53;
+                content: ''
+                height 5px
+                background $cor01
+                width: 33px
+                position: absolute
+                bottom: 0
+
+        .fbits-filtro-quantidade
+            color  $cor01
+
 
         .fbits-lista-filtro-filho
             display: block
@@ -156,6 +172,11 @@
                     
                 label 
                     margin 0
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: #333333;
+                    font-weight: 500;
+
             .fbits-filtro-ver-mais
                 text-align: left
                 font-size: 12px
@@ -237,11 +258,8 @@
         &-wrapper
             display: flex
             align-items: center
-            justify-content: space-between
+            justify-content: center
             flex-wrap: wrap
-            width: 80%
-            margin-left: auto
-            border-top: 1px solid #E7E7E7
             padding-top: 30px
             margin-top: 30px
     &__text
@@ -289,6 +307,13 @@
                 position absolute
                 top: 0px
                 left 255px
+                color #ee3a53
+                font-size 18px
+                line-height normal
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
         &__header
             &-wrapper
                 padding-top: 25px
@@ -336,3 +361,35 @@
     .category__products
         .fbits-item-lista-spot
             flex: 1 1 49%
+
+
+.categoria__name
+    display block
+    font-size: 25px
+    color: $cor02
+    line-height: 27px
+    text-align: center
+    text-transform: none
+    font-weight: 800
+    display flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 30px
+    padding-bottom 10px
+    border-bottom 1px dashed #ccc
+    position relative
+
+    &:after
+        content: ''
+        height 5px
+        background $cor01
+        width: 5%
+        position: absolute
+        bottom: 0
+
+
+    &-span
+        display block
+    
+    .fbits-item-lista-spot.fbits-item-lista-spot-empty
+        display none
