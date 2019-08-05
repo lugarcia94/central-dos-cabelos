@@ -122,6 +122,7 @@
     margin: 15px 0
     display flex
     align-items center
+    max-width: 100%
 
     .fbits-titulo-quantidade.atributo-div
         font-size: 12px
@@ -257,6 +258,8 @@
             position: absolute;
             left: 0;
             background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAaCAMAAADG6y/lAAABblBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAcCckUAAAAenRSTlMADNr//W8wsIhgzkDEPSgH9Kh40Nn6ZeM0uiAlP4bz/ktBj5BqZ5QPJObhBAH8yRVOVdPgnInRC6L4OofkT5uyA4DwvKwGI6WScXpXrb9rz+9d3Ou5PMigjoTYs+7owC75ECLSWO216lrfgTUfuIvimH7GTGbLwwrUOIWMoBsAAAFaSURBVHjajdLnUsJgEIbRxRelqYCAvQL2AGoUC1ETFCxYsYO9917v3gQxE8gHw/n/7MzuLKkMZWAzlhNTBQoxFQzMFgZrkcBGDCZU2mRV1faSgyyHs5qyalwyd8FA5amlP3X4U88OGhplTc0trWhrp4wOr0/hp6zOrm5NoC7d04u+fmLgAgiGGAENAIPE4gWGQoyA4zFMIy69MORiVB/QGKw0jgImGEEEAk369KYATIuMQEKUGMQZYDZGpQdxYE6kYoHFlDH/f+SFRZGKBoK6pw47SCzJ85cBWwlB/rdyK6trwfX8wGBObmxuMYNhKKTcwL4NmXFSF+xIu4BVciOwJ6lSSDmBdGQfB9KhNjhCxvEJnULnjKNzKC5IFbvkef5CCeLAFa/lUIJroI6/uaVcd0C4JYnAPWn5gYfHKJ5E0nuG4oVy2F8h87wRA/f+IXwmKM/X7beQ/iHFL+2QO5uYW0jgAAAAAElFTkSuQmCC")no-repeat;
+            top: 4px
+            background-size: 43px
 
     .details-content 
         display: flex!important
@@ -514,11 +517,17 @@
     align-items: center
     flex-wrap: wrap
     justify-content: space-between 
+    border-bottom: 1px dashed #ccc
+    margin-bottom: 20px
+    padding-bottom: 20px
 
     @media(max-width: 992px)
         justify-content: center
         margin-bottom 25px
  
+.product__frete 
+    margin-top: 20px
+
 .carrinhoInputBlock
     float: none
     border none

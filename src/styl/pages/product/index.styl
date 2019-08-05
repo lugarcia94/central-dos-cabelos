@@ -152,14 +152,23 @@
         margin: 0
         order: 2
         margin: 0 auto
-        display: none
+        display: block
 
         span  
-            font-size: 12px
-            color: $cor02
-            max-width 140px
-            display: block 
-            text-align: center
+            font-size: 0;
+            color: #666666; 
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+
+            &:before
+                content: 'Restam apenas';
+                font-size 14px
+
+            b
+                color: $cor01
+                font-size 14px
+                margin-left 5px
 
     .avisoIndisponivel
         margin: 10px 0
@@ -321,7 +330,7 @@
                 &[data-atributoselecionado="True"]
                     
                     color: #fff
-                    background: #373535
+                    background:  $cor01
                     font-weight: 700
 
                 &:not(.selected)
@@ -726,8 +735,9 @@
     #divFormaPagamento
         display: flex
         align-items: center
-        justify-content: center
+        justify-content: flex-start
         flex-wrap: wrap
+
 
     *
         float: none
@@ -742,9 +752,9 @@
 
     .precoPor
     .precoPor.com-precoDe 
-        color: #373535
-        font-size: 22px
-        line-height: 24px
+        color: #ee3a53
+        font-size: 30px
+        line-height: 32px
         font-weight: 700
         margin: 5px 0
  
@@ -1384,10 +1394,9 @@ section.showcase__one.showcase__list .showcase__container
                 color: #BABABA
                 font-size: 15px
                 font-style: italic 
-                
-.content.produto
-    border-top: 1px solid #F3F3F3 
-
+#bodyProduto
+    .full__banner-beneficios
+        box-shadow: 1000px 0 $cor02,-1000px 0 $cor02
 
 .product__top
     margin-bottom 50px
@@ -1408,3 +1417,9 @@ section.showcase__one.showcase__list .showcase__container
     transform: translateX(-50%)
     padding 0
     margin-top 5px
+
+.divPaiCarrosselCompreJunto .variante .optionAtributos
+    display none
+
+li.atributos-container.atributos-cor 
+    display: none!important
