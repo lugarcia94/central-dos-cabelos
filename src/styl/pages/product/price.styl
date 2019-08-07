@@ -126,7 +126,7 @@
 
     .fbits-titulo-quantidade.atributo-div
         font-size: 12px
-        text-transform: uppercase
+        text-transform: uppercase!important
         line-height: 1.2
         text-align: left      
         color: #353535
@@ -237,6 +237,7 @@
         margin: 0
         position relative
         padding-left 52px
+        top: -10px
 
         @media(max-width 992px) 
             width: 100%
@@ -263,8 +264,7 @@
 
     .details-content 
         display: flex!important
-        align-items: center
-        flex-wrap wrap
+        align-items: center 
         padding: 0
         position relative
 
@@ -313,9 +313,10 @@
         line-height 1
         font-weight 400
         color #adadad
-        position: absolute;
-        bottom: 0;
-        left: 50px;
+        position: absolute
+        bottom: 0
+        left: 53px
+        top: 20px
 
         @media(max-width: 992px)
             position relative
@@ -680,7 +681,8 @@ div#divGrupoProduto ul:nth-child(3)
 
  .quantity
     position relative
-
+    width: 120px
+    border: 1px solid #e7e7e7
 .quantity__button 
     position absolute
     width 38px

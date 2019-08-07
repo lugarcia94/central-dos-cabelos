@@ -167,6 +167,9 @@
             display: flex
             align-items: center
 
+            .headerLogo
+                width auto!important
+
             @media(max-width : 991px)
                 width 33%
                 justify-content center
@@ -204,11 +207,13 @@
                 background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAolBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyApQp+MAAAANnRSTlMAE4DR+P3jnjJN772Hfqb+jgPNLA+V/50KhFYC0tZpJUopUTerBUPx7AtqNCpTrPCIDZcBk+2vVtspAAAAnElEQVR42l2M1w6DMBAETTEQYzocoQUS0nv9/1+LS4ylzMPuaaRbxDBMy8aO6yHFjGCfBiGJ4uQncJrxzgsohTBIOkeSCmpeJs7Ue9N2vCwfTSygZ2lTbTwYWOJAm6UYckJtVjCydEk+mTXZ8N+oUGILcjOGqpFitz+IIymhPZ7Olyvc4I4kdQcMQh/PSaF+qEc2+pJKIxT9V+/PFx1QCwGxbrgwAAAAAElFTkSuQmCC')
                 background-repeat: no-repeat
                 background-position: center
+                height 39px
 
                 &:hover
                     color: #ffffff
                 .icon.isearch
                     display: none
+                    
         &-account, &-order, &-contact
             border-right: 1px solid #D8D8D8
             padding: 12px 20px
