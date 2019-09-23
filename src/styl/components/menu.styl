@@ -1,8 +1,10 @@
 .header
     &__navbar
+        display: none;
         background: #ffffff
         transition: all .3s
         width: 100%
+        height: 50px
         @media(max-width : 991px)
             padding-top: 0px
             position: fixed
@@ -13,8 +15,7 @@
             z-index 9
             background: none
         &-container
-            max-width: 1330px
-            padding: 0 15px
+            max-width: 1190px
             width: 100%
             margin: 0 auto
             @media(max-width : 991px)
@@ -49,6 +50,17 @@
                     padding-top: 40px
                     .footer__contact
                         margin: 0
+    .menuMain
+        width: 100%;
+        border-bottom: 1px solid #cecece
+        background-color: #fff;
+    .menu
+        background-color: #fff;
+        width: 100%;
+        height: 55px;
+        &__wrapper
+            display: flex
+            justify-content: space-between
 
     ul.menu
         display: flex
@@ -65,21 +77,37 @@
             margin: 0
         > li.item
             background: transparent
-            padding: 0!important
             margin: 0!important
             display: flex!important 
-            padding: 0 8px!important
+            padding: 0
+            flex: 1 1 auto
             min-width: 0px
             border: none
             box-shadow none
             align-items: center
-
+            height: 55px;
+            &.ultimo
+                width: 88px !important
+                height: 30px !important
+                display: flex
+                justify-content: center
+                align-items: center
+                a
+                    color: #fff !important
+                    width: 88px !important
+                    height: 30px !important
+                    background-color: $cor01
+                &:hover
+                    a
+                        background-color: $cor01
             @media(max-width : 991px)
                 flex-wrap: wrap
             > a
-                color #fff!important
+                color #333!important
                 padding 0!important
-
+                font-size: 14px
+                img 
+                    display: none
             &:hover
                 > ul
                     display flex
@@ -208,7 +236,6 @@
                     height: auto!important
                     min-height: 30px
             &.todas-categorias
-                order: 1
                 position: static
                 @media(max-width : 991px)
                     position relative
@@ -336,8 +363,8 @@
                     color $cor02!important
 
             .todas-categorias
-                height 50px
-                font-size: 0px
+                height 55px !important
+                font-size: 0px !important
                 line-height: 11px
                 display: flex!important
                 align-items: center
@@ -351,15 +378,28 @@
                     justify-content: flex-start
                     height: 65px!important
                 &:before
-                    content: 'Ver outras categorias'
-                    font-size: 12px
-                    line-height: 14px
+                    content: 'Toda a Loja'
+                    font-size: 14px
+                    line-height: 18px
                     display inline
-                    color: #A9A9A9
+                    color: $cor01
                     font-weight: 800
                     text-transform: uppercase
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     @media(max-width : 1199px)
                         font-size: 11px
+                &:after 
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 5px;
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjk1YTZjIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjg0LjkyOXB4IiBoZWlnaHQ9IjI4NC45MjlweCIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTI4Mi4wODIsNzYuNTExbC0xNC4yNzQtMTQuMjczYy0xLjkwMi0xLjkwNi00LjA5My0yLjg1Ni02LjU3LTIuODU2Yy0yLjQ3MSwwLTQuNjYxLDAuOTUtNi41NjMsMi44NTZMMTQyLjQ2NiwxNzQuNDQxTDMwLjI2Miw2Mi4yNDFjLTEuOTAzLTEuOTA2LTQuMDkzLTIuODU2LTYuNTY3LTIuODU2Yy0yLjQ3NSwwLTQuNjY1LDAuOTUtNi41NjcsMi44NTZMMi44NTYsNzYuNTE1QzAuOTUsNzguNDE3LDAsODAuNjA3LDAsODMuMDgyYzAsMi40NzMsMC45NTMsNC42NjMsMi44NTYsNi41NjVsMTMzLjA0MywxMzMuMDQ2YzEuOTAyLDEuOTAzLDQuMDkzLDIuODU0LDYuNTY3LDIuODU0czQuNjYxLTAuOTUxLDYuNTYyLTIuODU0TDI4Mi4wODIsODkuNjQ3YzEuOTAyLTEuOTAzLDIuODQ3LTQuMDkzLDIuODQ3LTYuNTY1QzI4NC45MjksODAuNjA3LDI4My45ODQsNzguNDE3LDI4Mi4wODIsNzYuNTExeiIvPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 10px;
         li.select
             @media(max-width : 991px)
                 a.menu-geral
@@ -390,8 +430,27 @@
 
             @media(min-width : 992px)
                 display: none
-            
+
+
+.moving
+    .header
+        .menuMain
+            transition: .3s
+            margin-top: 0px;
+        &__topbar
+            transition: .3s
+            margin-top: -35px;
+    @media(max-width : 991px)
+        .header__mainbar
+            box-shadow: 0.307px 0.307px 4px 0 rgba(0,0,0,.11)
+        .header__topbar
+            transform: translate3d(0, -100%, 0)
+
 .moving--down
+    .header
+        .menuMain
+            transition: .3s
+            margin-top: -60px;
     @media(min-width : 992px)
         .header__navbar
             transform: translateY(-100%)
@@ -404,13 +463,6 @@
             padding: 0
             opacity 0
             visibility: hidden
-
-.moving
-    @media(max-width : 991px)
-        .header__mainbar
-            box-shadow: 0.307px 0.307px 4px 0 rgba(0,0,0,.11)
-        .header__topbar
-            transform: translate3d(0, -100%, 0)
 
 .menu__open
     overflow hidden

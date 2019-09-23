@@ -15,7 +15,6 @@ $(document).ready(function () {
             scrollTop: targetOffset - 120
         }, 500);
     });
-
     $(".newsletter-box input#Nome").attr("placeholder", "Seu nome aqui");
     $(".newsletter-box input#Email").attr("placeholder", "Seu e-mail aqui");
 
@@ -175,6 +174,7 @@ $(document).ajaxComplete(function (event, xhr, settings) {
         $(".popUp-News input#modal-Email").attr("placeholder", "Seu e-mail aqui")
         $(".popUp-News input#btnCadastrarNews").attr("value", "QUERO GANHAR!")
     }
+    $("input.inputSearch[type='text']").attr("placeholder", "O que você procura?");
 });
 
 if ($(window).width() < 992) {

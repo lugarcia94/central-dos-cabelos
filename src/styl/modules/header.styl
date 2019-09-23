@@ -7,7 +7,7 @@
     display: flex
     flex-wrap: wrap
     &__topbar
-        background-color: $cor01 
+        background-color: $cor02
         width: 100%
         transition: all .3s
         
@@ -15,14 +15,13 @@
             order: 1
             display none
         &-container
-            max-width: 1330px
-            padding: 0 15px
+            max-width: 1190px
             width: 100%
             margin: 0 auto
             display: flex
             align-items: center
             justify-content: space-between
-            min-height 60px
+            min-height 35px
  
 
        
@@ -39,7 +38,7 @@
                     font-size: 13px
                     color: #fffbfc
                     margin-right: 10px
-
+                    text-transform: uppercase
             ul.telefone__mid 
                 li 
                     color: #fff
@@ -68,6 +67,7 @@
                     a
                         font-size 13px
                         color: #fff
+                        text-transform: uppercase
 
         &-list
             padding-left: 220px
@@ -128,18 +128,16 @@
             &--one
                 padding-right: 20px
     &__mainbar
-        background: $cor02
+        background: #fff;
         position: relative
         z-index: 1
         width: 100%
-        border: 1px dashed #464646
-
-            
+        border-bottom: 1px solid #cecece
+        z-index: 999
         
  
         &-container
-            max-width: 1330px
-            padding: 0 15px
+            max-width: 1190px
             width: 100%
             margin: 0 auto
             
@@ -148,7 +146,7 @@
             align-items: center
             justify-content: space-between
             min-height: 100px
-            
+            padding: 19px 0
             @media(max-width : 991px)
                 flex-wrap: wrap
 
@@ -168,7 +166,10 @@
             align-items: center
 
             .headerLogo
-                width auto!important
+                max-width: 264px
+                width: 264px
+                img 
+                    max-width: 264px
 
             @media(max-width : 991px)
                 width 33%
@@ -178,7 +179,7 @@
                     width 100%
 
         &-serach
-            max-width: 280px
+            max-width: 360px
             width: 100%
             position relative
             @media(max-width : 991px)
@@ -197,18 +198,22 @@
             input.inputSearch 
                 font-size: 13px
                 color: #666666 
-
+                border: 1px solid #d9d9d9 !important;
+                border-radius 50px
                 &::placeholder
                     font-size: 13px
                     color: #666666
 
             button#btnBusca.btSearch
                 position absolute
-                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAolBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyApQp+MAAAANnRSTlMAE4DR+P3jnjJN772Hfqb+jgPNLA+V/50KhFYC0tZpJUopUTerBUPx7AtqNCpTrPCIDZcBk+2vVtspAAAAnElEQVR42l2M1w6DMBAETTEQYzocoQUS0nv9/1+LS4ylzMPuaaRbxDBMy8aO6yHFjGCfBiGJ4uQncJrxzgsohTBIOkeSCmpeJs7Ue9N2vCwfTSygZ2lTbTwYWOJAm6UYckJtVjCydEk+mTXZ8N+oUGILcjOGqpFitz+IIymhPZ7Olyvc4I4kdQcMQh/PSaF+qEc2+pJKIxT9V+/PFx1QCwGxbrgwAAAAAElFTkSuQmCC')
+                background-color: $cor01
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTkyMi43NSA4NzMuNDMybC0yMDguOTE4LTIxNy4wNDRjNTEuNzg5LTYxLjI5IDgzLjI1OC0xNDEuMTQ2IDgzLjI1OC0yMjguMzYgMC0xOTYuMDExLTE1OC44ODUtMzU0Ljg5Ni0zNTQuODk2LTM1NC44OTZzLTM1NC44OTYgMTU4Ljg4NS0zNTQuODk2IDM1NC44OTZjMCAxOTYuMDExIDE1OC44ODUgMzU0Ljg5NiAzNTQuODk2IDM1NC44OTYgNzYuMjI4IDAgMTQ2LjgwMS0yNC4wMDEgMjA0LjYzMi02NC44NjJsLTEuMDk5IDAuNzY4IDIxMC40NTYgMjE4Ljc0OWM4LjM0NyA4Ljc4NyAyMC4xMDEgMTQuMjc4IDMzLjExOCAxNC4yNzggMC4wNTUgMCAwLjExMSAwIDAuMTY2IDBoLTAuMDAxYzI1LjQ4My0wLjE2NiA0Ni4wNzgtMjAuODcxIDQ2LjA3OC00Ni40MDggMC0xMi40MTEtNC44ODctMjMuNjctMTIuNzk2LTMxLjk2NWwwLjAwMSAwLjAwMXpNNDQyLjY5IDE2Ni43MTZjMTQ0LjY1OSAwIDI2MS45MTQgMTE3LjI1NSAyNjEuOTE0IDI2MS45MTRzLTExNy4yNTUgMjYxLjkxNC0yNjEuOTE0IDI2MS45MTRjLTE0NC42NTkgMC0yNjEuOTE0LTExNy4yNTUtMjYxLjkxNC0yNjEuOTE0djBjMC4xMS0xNDQuNjA1IDExNy4zMDktMjYxLjgwNSAyNjEuOTE0LTI2MS45MTRoMC4wMDF6Ij48L3BhdGg+PC9zdmc+')
                 background-repeat: no-repeat
                 background-position: center
+                background-size: 20px
+                border-radius 50px
                 height 39px
-
+                width: 60px
                 &:hover
                     color: #ffffff
                 .icon.isearch
@@ -233,7 +238,7 @@
             display: flex
             align-items: center
             justify-content: space-between
-            max-width: 240px
+            max-width: 480px
             width 100%
             position relative
 
@@ -244,43 +249,131 @@
             display: flex 
             align-items: center
 
-            @media(max-width : 991px)
-                display none
-
-            &:after
-                content: ''
-                color: #fff
-                position: absolute
-                border-right: 1px dashed #464646
-                width: 1px
-                height 50px
-                left 70% 
-
-                @media(max-width 991px)
-                    display none
-
             img
                 margin-right 10px
-
+                max-width: 25px;
             span
                 font-size 13px
-                color: #ffffff
+                font-weight: 600
+                color: #333
                 display: block
 
                 a
                     display block
-                    color: $cor01
-                    text-decoration: underline
-                    font-weight: 600
-            
+                    color: #333
+                    font-weight: 800
+                    &:after 
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 5px;
+                        background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjk1YTZjIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjg0LjkyOXB4IiBoZWlnaHQ9IjI4NC45MjlweCIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTI4Mi4wODIsNzYuNTExbC0xNC4yNzQtMTQuMjczYy0xLjkwMi0xLjkwNi00LjA5My0yLjg1Ni02LjU3LTIuODU2Yy0yLjQ3MSwwLTQuNjYxLDAuOTUtNi41NjMsMi44NTZMMTQyLjQ2NiwxNzQuNDQxTDMwLjI2Miw2Mi4yNDFjLTEuOTAzLTEuOTA2LTQuMDkzLTIuODU2LTYuNTY3LTIuODU2Yy0yLjQ3NSwwLTQuNjY1LDAuOTUtNi41NjcsMi44NTZMMi44NTYsNzYuNTE1QzAuOTUsNzguNDE3LDAsODAuNjA3LDAsODMuMDgyYzAsMi40NzMsMC45NTMsNC42NjMsMi44NTYsNi41NjVsMTMzLjA0MywxMzMuMDQ2YzEuOTAyLDEuOTAzLDQuMDkzLDIuODU0LDYuNTY3LDIuODU0czQuNjYxLTAuOTUxLDYuNTYyLTIuODU0TDI4Mi4wODIsODkuNjQ3YzEuOTAyLTEuOTAzLDIuODQ3LTQuMDkzLDIuODQ3LTYuNTY1QzI4NC45MjksODAuNjA3LDI4My45ODQsNzguNDE3LDI4Mi4wODIsNzYuNTExeiIvPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 10px;
+            &.atendimento
+                position relative
+                .atendimento__sub
+                    display: none;
+                    position: absolute
+                    top: 50px
+                    left: 50%
+                    transform: translateX(-50%)
+                    padding: 20px 15px
+                    background-color: #ffffff
+                    border: 1px solid #d2d2d2
+                    transition: 1s
+                    h3
+                        font-size: 15px
+                        text-transform: uppercase
+                        font-weight: 800
+                        margin-bottom: 10px
+                        color: $cor02
+                        &:before
+                            content: ''
+                            width: 100%
+                            height: 15px 
+                            position absolute
+                            top: 0
+                            left: 0
+                            background-color: #fff
+                    &:before
+                        content: ''
+                        width: 15px 
+                        height: 15px
+                        transform: rotate(45deg)
+                        position: absolute
+                        top: -8px
+                        left: 47%
+                        background-color: #d2d2d2
+                    &:after
+                        content: ''
+                        width: 100% 
+                        height: 15px
+                        position: absolute
+                        top: -15px
+                        left: 0
+                        background-color: transparent
+                &:hover
+                    .atendimento__sub
+                        display: block
+            &.user-bemvindo
+                .login__sub
+                    display: none;
+                    position: absolute
+                    top: 50px
+                    left: 50%
+                    transform: translateX(-50%)
+                    padding: 20px 15px
+                    background-color: #ffffff
+                    border: 1px solid #d2d2d2
+                    transition: 1s
+                    h3
+                        font-size: 15px
+                        text-transform: uppercase
+                        font-weight: 800
+                        margin-bottom: 10px
+                        color: $cor02
+                        &:before
+                            content: ''
+                            width: 100%
+                            height: 15px 
+                            position absolute
+                            top: 0
+                            left: 0
+                            background-color: #fff
+                    &:before
+                        content: ''
+                        width: 15px 
+                        height: 15px
+                        transform: rotate(45deg)
+                        position: absolute
+                        top: -8px
+                        left: 47%
+                        background-color: #d2d2d2
+                    &:after
+                        content: ''
+                        width: 100% 
+                        height: 15px
+                        position: absolute
+                        top: -15px
+                        left: 0
+                        background-color: transparent
+                &:hover
+                    .login__sub
+                        display: block
         &-cart
             padding-left: 10px
+            display: flex 
+            span
+                font-size: 13px;
+                font-weight: 600;
+                color: #333;
+                margin-left: 5px;
             @media(max-width : 991px)
                 padding: 0
             .carrinho.carrinhoHead
-                float: none
-                width: 42px
-                position relative
                 a
                     float none
                     display: flex!important
@@ -290,20 +383,29 @@
                 .minicart-txt-itens
                     display: none
                 .minicart-qtde-itens
-                    width: 22px
-                    height 22px
-                    background: $cor01
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    padding: 0
-                    border-radius: 50%
                     color: $cor02
-                    font-size: 11px
-                    font-weight: 800
+                    font-size: 13px
+                    color: #333;
+                    font-weight: 800;
                     float: none
                     position: absolute
-                    right: -8px
-                    top: 0
-                    &:before, &:after
-                        display: none
+                    left: 25px
+                    bottom: -12px
+                    &:before
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 5px;
+                        background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjk1YTZjIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjg0LjkyOXB4IiBoZWlnaHQ9IjI4NC45MjlweCIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTI4Mi4wODIsNzYuNTExbC0xNC4yNzQtMTQuMjczYy0xLjkwMi0xLjkwNi00LjA5My0yLjg1Ni02LjU3LTIuODU2Yy0yLjQ3MSwwLTQuNjYxLDAuOTUtNi41NjMsMi44NTZMMTQyLjQ2NiwxNzQuNDQxTDMwLjI2Miw2Mi4yNDFjLTEuOTAzLTEuOTA2LTQuMDkzLTIuODU2LTYuNTY3LTIuODU2Yy0yLjQ3NSwwLTQuNjY1LDAuOTUtNi41NjcsMi44NTZMMi44NTYsNzYuNTE1QzAuOTUsNzguNDE3LDAsODAuNjA3LDAsODMuMDgyYzAsMi40NzMsMC45NTMsNC42NjMsMi44NTYsNi41NjVsMTMzLjA0MywxMzMuMDQ2YzEuOTAyLDEuOTAzLDQuMDkzLDIuODU0LDYuNTY3LDIuODU0czQuNjYxLTAuOTUxLDYuNTYyLTIuODU0TDI4Mi4wODIsODkuNjQ3YzEuOTAyLTEuOTAzLDIuODQ3LTQuMDkzLDIuODQ3LTYuNTY1QzI4NC45MjksODAuNjA3LDI4My45ODQsNzguNDE3LDI4Mi4wODIsNzYuNTExeiIvPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 10px;
+                        position: absolute;
+                        bottom: 10px;
+                        right: -15px;
+                    &:after
+                        content: 'Item'
+                        margin-left: 5px
+
+    
