@@ -1,5 +1,40 @@
+.footerNews    
+    margin: 0 !important
+    padding 30px 0
+    background-color: $cor01 !important
+    .news.left
+        display none
+    .txtNews.left
+        width: initial
+        span
+            font-size: 20px
+    .footerNewsForm
+        max-width 800px
+    .centerContent
+        display flex
+        justify-content: space-between
+        align-items: center
+        max-width 1190px
+        margin 0 auto
+        float: none !important
+    .newsletter-box
+        display flex
+        input[type="text"]
+            width: 320px
+    @media(max-width 1290px)
+        .centerContent
+            max-width 991px
+        .right.footerNewsForm
+            float: none !important
+            width: 100%
+            max-width 100%
+            .newsletter-box
+                justify-content: center;
+            input.btNews
+                margin 10px auto
+                float none
 .newsletter
-    background: $cor02
+    background-color: $cor01 !important
     border 1px dashed #ccc
     padding: 15px
 
@@ -84,6 +119,8 @@
         color #fff
         @media(max-width : 810px)
             width: 100%!important
+
+    
 
 .icon__news
     &:before

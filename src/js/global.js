@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    //menu mobile
+    $('.header__mainbar-mobile').click(function(){
+        $('.header .menuMain').addClass('open');
+    })
+    $('.header .menuMain button.btn-close-menu-mobile').click(function(){
+        $('.header .menuMain').removeClass('open');
+    })
+
+
     if ($(".category__products >span").length) {
         $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
         $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")

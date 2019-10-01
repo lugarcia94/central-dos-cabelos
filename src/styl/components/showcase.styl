@@ -1,5 +1,5 @@
 .showcase
-    padding-top: 60px
+    padding: 60px 0
     @media(max-width : 991px)
         padding: 0
     @media(max-width : 599px)
@@ -262,4 +262,53 @@ section.showcase.instagram
             &:before
                 content: '@'
                 
+.showcase
 
+    .spot
+        .spotImg
+            margin-bottom 18px !important
+        .spotTitle
+            font-size: 18px !important 
+            font-size: 16px !important;
+            text-transform: initial !important;
+            color: $cor02 !important;
+            font-weight: 500;
+        .spotPreco
+            display flex !important
+            justify-content: center
+            height: initial
+            .precoDe
+                margin-right 10px
+                color: $cor03 
+            .precoPor 
+                font-size: 18px
+                font-weight bold
+                color: $cor01
+                &:before
+                    display: none
+        &:hover 
+            .botoesSpot
+                display flex !important
+        .botoesSpot
+                justify-content: space-between !important
+                .bt.comprar 
+                    background-color: $cor01 
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz48cGF0aCBkPSJNNDQ3Ljk4OCwxMzkuNjk2Yy0wLjE1Ni0yLjA4NC0xLjktMy42OTYtMy45ODgtMy42OTZoLTcydi0yMEMzNzIsNTIuMDM2LDMxOS45NiwwLDI1NiwwUzE0MCw1Mi4wMzYsMTQwLDExNnYyMEg2OGMtMi4wODgsMC0zLjgzMiwxLjYxMi0zLjk4OCwzLjY5NmwtMjgsMzY4Yy0wLjA4NCwxLjEwOCwwLjI5NiwyLjIwNCwxLjA1NiwzLjAyQzM3LjgyNCw1MTEuNTM2LDM4Ljg4OCw1MTIsNDAsNTEyaDQzMmMxLjExMiwwLDIuMTc2LTAuNDY0LDIuOTMyLTEuMjhjMC43NTYtMC44MTYsMS4xNC0xLjkxMiwxLjA1Ni0zLjAyTDQ0Ny45ODgsMTM5LjY5NnogTTE3MiwxMTZjMC00Ni4zMTYsMzcuNjgtODQsODQtODRzODQsMzcuNjg0LDg0LDg0djIwSDE3MlYxMTZ6IE0xNTYsMjQ4Yy0yMi4wNiwwLTQwLTE3Ljk0NC00MC00MGMwLTE1Ljk2NCw4LTMwLjM0OCwyNC0zNi42NlYyMDhjMCw4LjgyNCw3LjE4LDE2LDE2LDE2czE2LTcuMTc2LDE2LTE2di0zNi42MzZjMTYsNi4zMTIsMjQsMjAuODA0LDI0LDM2LjYzNkMxOTYsMjMwLjA1NiwxNzguMDYsMjQ4LDE1NiwyNDh6IE0zNTYsMjQ4Yy0yMi4wNiwwLTQwLTE3Ljk0NC00MC00MGMwLTE1Ljk2NCw4LTMwLjM0OCwyNC0zNi42NlYyMDhjMCw4LjgyNCw3LjE4LDE2LDE2LDE2czE2LTcuMTc2LDE2LTE2di0zNi42MzZjMTYsNi4zMTIsMjQsMjAuODA0LDI0LDM2LjYzNkMzOTYsMjMwLjA1NiwzNzguMDYsMjQ4LDM1NiwyNDh6Ii8+PC9nPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=') !important 
+                    background-size 15px
+                    background-position: 75% !important
+                    font-weight 600 !important
+                    &:before
+                        display none
+                .bt.adicionar
+                    display none !important
+                .wishLink.link-add-lista.addListaDesejos
+                    color: transparent !important
+                    background-color: transparent !important
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjOTg5ODk4IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEwcHgiIGhlaWdodD0iNTEwcHgiIHZpZXdCb3g9IjAgMCA1MTAgNTEwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTAgNTEwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGcgaWQ9ImZhdm9yaXRlIj48cGF0aCBkPSJNMjU1LDQ4OS42bC0zNS43LTM1LjdDODYuNywzMzYuNiwwLDI1Ny41NSwwLDE2MC42NUMwLDgxLjYsNjEuMiwyMC40LDE0MC4yNSwyMC40YzQzLjM1LDAsODYuNywyMC40LDExNC43NSw1My41NUMyODMuMDUsNDAuOCwzMjYuNCwyMC40LDM2OS43NSwyMC40QzQ0OC44LDIwLjQsNTEwLDgxLjYsNTEwLDE2MC42NWMwLDk2LjktODYuNywxNzUuOTUtMjE5LjMsMjkzLjI1TDI1NSw0ODkuNnoiLz48L2c+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==') !important 
+                    background-position: center
+                    background-size: 15px 13px
+                    background-repeat: no-repeat !important
+                    &:hover
+                        border-color: $cor01 !important
+        .fbits-spot-conteudo
+            height: 160px !important

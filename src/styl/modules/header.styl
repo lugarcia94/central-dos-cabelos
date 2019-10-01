@@ -22,10 +22,6 @@
             align-items: center
             justify-content: space-between
             min-height 35px
- 
-
-       
- 
 
             ul
                 display flex
@@ -407,5 +403,50 @@
                     &:after
                         content: 'Item'
                         margin-left: 5px
+
+    @media(max-width: 1290px)
+        &__topbar-container
+        &__mainbar-container
+            max-width: 991px
+        &__mainbar 
+            &-links
+                span 
+                    display none
+            &-cart
+                span 
+                    display none
+                span.minicart-qtde-itens
+                    display block
+                    background-color transparent 
+                    left: 10px !important
+                    &:before
+                    &:after
+                        display none !important
+                .carrinho.carrinhoHead
+                    position relative
+                    a
+                        margin-right: 10px;
+                span.minicart-qtde-itens
+                    left: 10px;
+            &-right
+                max-width: 235px;
+    @media(max-width: 991px)
+        &__mainbar
+            &-container
+                padding 0 15px
+            &-links
+                display none
+            &-logo
+                width: 60%
+                .headerLogo
+                    max-width: 100% !important 
+                    img 
+                        max-width: 100% !important
+            &-mobile
+                height: 30px
+            &-serach
+                padding-top 10px
+
+        
 
     
