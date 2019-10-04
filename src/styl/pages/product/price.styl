@@ -75,8 +75,6 @@
         &:before
             display: none
 
-    #fbits-div-preco-off + #fbits-div-preco-off
-        display: none
 
     .fbits-preco-off
         margin: 0 0 0 5px
@@ -114,9 +112,16 @@
         
         .parcelajuros
             display: none
- 
+
+.prazo-entrega-item
+    display none
+
+.product__offer {
+    width: 100%;
+}
 
 [id*="view-item-quantidade"]
+    display none !important
     width: 100%
     text-align: center
     margin: 15px 0
@@ -518,8 +523,6 @@
     align-items: center
     flex-wrap: wrap
     justify-content: space-between 
-    border-bottom: 1px dashed #ccc
-    margin-bottom: 20px
     padding-bottom: 20px
 
     @media(max-width: 992px)

@@ -4,13 +4,16 @@
             max-width: 1190px
             width: 100%
             margin: 0 auto
+            
         &-wrapper
             display: flex
             align-items: center
             justify-content: space-between
             flex-wrap: wrap
-            padding: 35px 0
-
+            padding: 35px 0 10px 0
+    @media(max-width 1290px)
+        max-width: 991px
+        margin 0 auto
     &__breadcrumb
         >ol
             display: inline-block
@@ -19,17 +22,31 @@
                 &:first-child
                     span[itemprop]
                         font-size: 0px
+                        text-transform uppercase
+                        color: #989898
+                        font-weight 400
                         &:before
-                            content: 'Você está em: Página Inicial'
-                            font-size: 13px
+                            content: 'Home'
+                            font-size: 10px
                 span[itemprop]
-                    font-size: 13px
-                    color: #333333
-                    font-weight: 500
+                    font-size: 10px
+                    color: #979797
+                    font-weight: 800
                     line-height: 16px
+                    text-transform uppercase
+
                 .separador
                     &:before
-                        content: '/'
+                        content: ''
+                        display inline-block
+                        color: #979797
+                        width: 10px
+                        height 10px
+                        background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjOTc5Nzk3IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0NnB4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDYgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NiA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTM0NS40NDEsMjQ4LjI5MkwxNTEuMTU0LDQ0Mi41NzNjLTEyLjM1OSwxMi4zNjUtMzIuMzk3LDEyLjM2NS00NC43NSwwYy0xMi4zNTQtMTIuMzU0LTEyLjM1NC0zMi4zOTEsMC00NC43NDRMMjc4LjMxOCwyMjUuOTJMMTA2LjQwOSw1NC4wMTdjLTEyLjM1NC0xMi4zNTktMTIuMzU0LTMyLjM5NCwwLTQ0Ljc0OGMxMi4zNTQtMTIuMzU5LDMyLjM5MS0xMi4zNTksNDQuNzUsMGwxOTQuMjg3LDE5NC4yODRjNi4xNzcsNi4xOCw5LjI2MiwxNC4yNzEsOS4yNjIsMjIuMzY2QzM1NC43MDgsMjM0LjAxOCwzNTEuNjE3LDI0Mi4xMTUsMzQ1LjQ0MSwyNDguMjkyeiIvPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=')
+                        background-repeat no-repeat
+                        background-position: center 
+                        background-size: 8px
+
                 &:last-child
                     span[itemprop]
                         font-weight: bold
@@ -50,7 +67,7 @@
             font-size: 14px;
             line-height: 30px;
             color: #333333;
-            font-weight: 700;
+            font-weight: 500;
             text-align: right;
             white-space: nowrap
         select 
@@ -62,7 +79,8 @@
             font-size: 13px
             appearance none
             padding-left: 9px
-
+            background-image url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjk1YTZjIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0N3B4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxYzEyLjM1NC0xMi4zNTQsMzIuMzg4LTEyLjM1NCw0NC43NDgsMGwxNzEuOTA1LDE3MS45MTVsMTcxLjkwNi0xNzEuOTA5YzEyLjM1OS0xMi4zNTQsMzIuMzkxLTEyLjM1NCw0NC43NDQsMGMxMi4zNjUsMTIuMzU0LDEyLjM2NSwzMi4zOTIsMCw0NC43NTFMMjQ4LjI5MiwzNDUuNDQ5QzI0Mi4xMTUsMzUxLjYyMSwyMzQuMDE4LDM1NC43MDYsMjI1LjkyMywzNTQuNzA2eiIvPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=') !important
+            background-size 10px
     &__pagination
         .fbits-paginacao > ul
             a
@@ -94,9 +112,9 @@
             justify-content: space-between
 
     &__filter
-        max-width: 220px
+        max-width: 290px
         width: 100%
-
+        margin-right 20px
         &-close
             display: none
 
@@ -105,34 +123,43 @@
 
         .fbits-filtro-pai
             margin: 0
-            padding: 25px 0
             border none
-
-            &:first-child
-                padding-top 0px
-
+            padding: 20px 0
+            border: 1px solid #d9d9d9
+            margin-bottom 30px
+            padding-left 20px
+            // &:first-child
+            //     padding 0
         .fbits-filtro-titulo-pai
-            font-size: 20px;
+            font-size: 15px;
             color: $cor02
-            line-height: 27px
+            line-height: 20px
             text-align: left
-            text-transform: none
+            text-transform: uppercase
             font-weight: 800
             display flex
             align-items: center
             justify-content: flex-start
             margin-bottom: 30px
-            padding-bottom 10px
-            border-bottom 1px dashed #ccc
+            padding-bottom 20px
             position relative
+            &:before
+                content: ''
+                height 1px
+                background #cecece
+                width: calc(100%+20px)
+                position: absolute
+                bottom: 0px
+                left -20px
 
             &:after
                 content: ''
-                height 5px
+                height 40px
                 background $cor01
-                width: 33px
+                width: 5px
                 position: absolute
-                bottom: 0
+                top: -12px
+                left -20px
 
         .fbits-filtro-quantidade
             color  $cor01
@@ -268,6 +295,8 @@
         padding-bottom: 30px
     &__btn-mobile
         display: none
+    &__content 
+        margin-top: 120px;
 
 //mobile
 @media(max-width : 991px)
@@ -316,7 +345,7 @@
                 padding-top: 25px
                 > *
                     flex: 1 1 100%
-                    text-align: center
+                    text-align: left
                     margin: 5px 0
                 .category__pagination
                     display: none
@@ -350,7 +379,9 @@
                 width: 100%
             .category__inforesult, .category__text
                 display: none
-
+        &__content 
+            margin-top: 0px;
+            padding: 0 15px;
     .filter__open
         .category__filter
             transform: translate3d(0, 0, 0)
@@ -359,30 +390,24 @@
         .fbits-item-lista-spot
             flex: 1 1 49%
 
+@media(max-width : 320px)
+    .category__products
+        .fbits-item-lista-spot
+            flex: 1 1 100%
+
 
 .categoria__name
     display block
-    font-size: 25px
-    color: $cor02
+    font-size: 20px
+    color: $cor01
     line-height: 27px
-    text-align: center
-    text-transform: none
+    text-align: left 
+    text-transform: uppercase
     font-weight: 800
-    display flex
-    align-items: center
-    justify-content: center
-    margin-bottom: 30px
-    padding-bottom 10px
-    border-bottom 1px dashed #ccc
+    margin-bottom: 20px
+    padding-bottom 0px
+    border-bottom 1px solid #ccc
     position relative
-
-    &:after
-        content: ''
-        height 5px
-        background $cor01
-        width: 5%
-        position: absolute
-        bottom: 0
 
 
     &-span

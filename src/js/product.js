@@ -8,7 +8,7 @@ define(['jquery', 'slick-carousel'], ($) => {
             if(gallery) {
                 gallery.slick({
                     slidesToShow: 4,
-                    vertical: true,
+                    vertical: false,
                     inifinite: false,
                     dots: false,
                     responsive: [

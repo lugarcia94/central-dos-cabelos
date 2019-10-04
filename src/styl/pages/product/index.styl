@@ -1,5 +1,44 @@
 #bodyProduto , #bodyListaCompra
 
+    .content.produto
+        margin-top: 140px
+        .fbits-breadcrumb
+            >ol
+                display: flex
+                >li
+                    display: inline
+                    &:first-child
+                        span[itemprop]
+                            font-size: 0px
+                            text-transform uppercase
+                            color: #989898
+                            font-weight 400
+                            &:before
+                                content: 'Home'
+                                font-size: 10px
+                    span[itemprop]
+                        font-size: 10px
+                        color: #979797
+                        font-weight: 800
+                        line-height: 16px
+                        text-transform uppercase
+
+                    .separador
+                        &:before
+                            content: ''
+                            display inline-block
+                            color: #979797
+                            width: 10px
+                            height 10px
+                            background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjOTc5Nzk3IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0NnB4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDYgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NiA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTM0NS40NDEsMjQ4LjI5MkwxNTEuMTU0LDQ0Mi41NzNjLTEyLjM1OSwxMi4zNjUtMzIuMzk3LDEyLjM2NS00NC43NSwwYy0xMi4zNTQtMTIuMzU0LTEyLjM1NC0zMi4zOTEsMC00NC43NDRMMjc4LjMxOCwyMjUuOTJMMTA2LjQwOSw1NC4wMTdjLTEyLjM1NC0xMi4zNTktMTIuMzU0LTMyLjM5NCwwLTQ0Ljc0OGMxMi4zNTQtMTIuMzU5LDMyLjM5MS0xMi4zNTksNDQuNzUsMGwxOTQuMjg3LDE5NC4yODRjNi4xNzcsNi4xOCw5LjI2MiwxNC4yNzEsOS4yNjIsMjIuMzY2QzM1NC43MDgsMjM0LjAxOCwzNTEuNjE3LDI0Mi4xMTUsMzQ1LjQ0MSwyNDguMjkyeiIvPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=')
+                            background-repeat no-repeat
+                            background-position: center 
+                            background-size: 8px
+
+                    &:last-child
+                        span[itemprop]
+                            font-weight: bold
+
     #avaliacao-Produto
         max-height: 180px
         overflow: hidden
@@ -33,7 +72,6 @@
 
     footer
         margin-top 30px
-        border-top: 1px dashed #ccc
 
     li.todas-categorias
         left: 0!important
@@ -81,6 +119,7 @@
             text-transform: uppercase
 
     .bread
+        padding: 0
         @media(max-width: 992px)
             margin: 0!important
 
@@ -101,8 +140,6 @@
             margin-bottom 15px!important
             max-width: 85px
 
-    #fbits-div-preco-off 
-        display: none
 
     .fbits-layout-item 
         display: none
@@ -153,6 +190,7 @@
              
 
     #msgEstoqueDisponivel
+        display none !important
         margin: 0
         order: 2
         margin: 0 auto
@@ -211,7 +249,8 @@
     .product__price 
         position relative
         border: 1px solid #E7E7E7
-        padding: 20px 15px
+        background-color #f3f3f3
+        padding: 45px
         display: flex
         flex-wrap: wrap
 
@@ -451,7 +490,6 @@
             justify-content: center
             margin-bottom: 30px
             padding-bottom 10px
-            border-bottom 1px dashed #ccc
             position relative
 
             &:after
@@ -734,7 +772,7 @@
     float: none 
     margin: 0
     line-height: 1.5rem 
-
+    flex: 0 1 240px
     #divFormaPagamento
         display: flex
         align-items: center
@@ -1089,11 +1127,12 @@ div#fbits-avaliar-produto
             display: none
     .icon
         &.starEmpty
+            width: 16px;
             &:before
                 @extend $ico-before
-                background-image svg-inline(starempty)
-                height: 15px
-                width: 15px
+                background-image url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTQnIGhlaWdodD0nMTQnIHZpZXdCb3g9JzAgMCAxNCAxNCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48dGl0bGU+U2hhcGU8L3RpdGxlPjxwYXRoIGQ9J00xMy45ODggNS4zMjhhLjI1NS4yNTUgMCAwIDAtLjIwMy0uMTc5bC00LjUzMy0uNjkxTDcuMjI1LjE0N0EuMjUuMjUgMCAwIDAgNyAwYS4yNS4yNSAwIDAgMC0uMjI0LjE0N0w0Ljc0OCA0LjQ1OGwtNC41MzMuNjkxYS4yNTUuMjU1IDAgMCAwLS4yMDMuMThjLS4wMy4wOTQtLjAwNS4yLjA2NC4yNjlsMy4yOCAzLjM1Ni0uNzc0IDQuNzM4YS4yNy4yNyAwIDAgMCAuMS4yNTdjLjA3Ni4wNi4xNzkuMDY3LjI2My4wMkw3IDExLjczMmw0LjA1NSAyLjIzN2EuMjQxLjI0MSAwIDAgMCAuMjY0LS4wMi4yNjkuMjY5IDAgMCAwIC4xLS4yNTdsLS43NzUtNC43MzggMy4yOC0zLjM1NmEuMjcyLjI3MiAwIDAgMCAuMDY0LS4yN3onIGZpbGw9JyNjY2NjY2MnIGZpbGwtcnVsZT0nbm9uemVybycvPjwvc3ZnPg==')
+                height: 13px
+                width: 13px
                 transition: $transition
 
         &.star
@@ -1114,12 +1153,15 @@ div#fbits-avaliar-produto
     top: 0
 
 .ribbon.fbits-etiqueta-off, .produto .fbits-preco-off
-    background: #FF5D5D
-    border-radius: 0
+    background: #00a594 !important
+    width: fit-content !important
+    padding 0 10px
+    border-radius: 3px
+    color: #fff
     width: 60px
     height: 30px
     font-size: 12px
-    font-weight: 700
+    font-weight: 800 !important
     white-space: inherit
     line-height: 12px
 
@@ -1397,12 +1439,44 @@ section.showcase__one.showcase__list .showcase__container
                 color: #BABABA
                 font-size: 15px
                 font-style: italic 
-#bodyProduto
-    .full__banner-beneficios
-        box-shadow: 1000px 0 $cor02,-1000px 0 $cor02
 
 .product__top
+    display flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
     margin-bottom 50px
+    width: 100%
+.product__details-header
+    flex: 1 1 100%
+    display flex
+    justify-content: space-between
+    align-items: center
+.product__tag
+    flex: 1 1 auto
+.product__reviews
+    flex: 1 1 auto
+    display flex
+    align-items: center
+    justify-content: flex-end
+    .fbits-avaliacao
+        width: fit-content !important
+    .avalie-top
+        display none
+    .avaliacao
+        width: fit-content !important
+        &:after
+            content: '|'
+            font-size: 12px
+            color #ccc
+
+.short__review-ancor
+    a
+        font-size: 12px
+        font-weight: 600
+        color: #9b9b9b
+        text-decoration underline
+        margin-left 5px
 
 .product__right
     flex 1 1 365px
