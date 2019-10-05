@@ -7,20 +7,22 @@
         .fbits-componente-banner .fbits-banner-item 
             a 
                 img
-                    width 150% !important
-                    max-width 150%
+                    width 230% !important
+                    max-width 230%
                     left 50%
                     transform: translateX(-50%)
 
-.full__banner
+.fullbanner
     .slick-prev
         left 0
         @media(max-width : 991px)
+            left 5px !important
             width: 30px
             height 30px
     .slick-next
         right 0
         @media(max-width : 991px)
+            right 5px !important
             width: 30px
             height 30px
     img
@@ -229,6 +231,8 @@
             margin 0 auto 
             display block
             color: #3c3c3c
+            @media(max-width: 355px)
+                font-size: 12px
         .slick-dots
             bottom: -50px !important
         @media(max-width: 1290px)

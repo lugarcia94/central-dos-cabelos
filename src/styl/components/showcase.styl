@@ -1,7 +1,7 @@
 .showcase
     padding: 60px 0
     @media(max-width : 991px)
-        padding: 0
+        padding: 40px 0
     @media(max-width : 599px)
         padding-bottom: 55px
     &__container
@@ -14,7 +14,8 @@
         font-weight: 800 !important
         color: $cor02 !important
         text-decoration: uppercase
- 
+        @media(max-width: 355px)
+            font-size: 15px !important
     .line
         span 
             display: block

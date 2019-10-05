@@ -175,7 +175,7 @@
 [id*="produto-variante"]
     float: none
     display: flex
-    justify-content: center
+    justify-content: space-between
     flex-wrap: wrap
     border none
 
@@ -192,44 +192,37 @@
 
 .produto-comprar
     a
-        background-color: rgb(0, 173, 90);
+        background-color: $cor01
+        background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz48cGF0aCBkPSJNNDQ3Ljk4OCwxMzkuNjk2Yy0wLjE1Ni0yLjA4NC0xLjktMy42OTYtMy45ODgtMy42OTZoLTcydi0yMEMzNzIsNTIuMDM2LDMxOS45NiwwLDI1NiwwUzE0MCw1Mi4wMzYsMTQwLDExNnYyMEg2OGMtMi4wODgsMC0zLjgzMiwxLjYxMi0zLjk4OCwzLjY5NmwtMjgsMzY4Yy0wLjA4NCwxLjEwOCwwLjI5NiwyLjIwNCwxLjA1NiwzLjAyQzM3LjgyNCw1MTEuNTM2LDM4Ljg4OCw1MTIsNDAsNTEyaDQzMmMxLjExMiwwLDIuMTc2LTAuNDY0LDIuOTMyLTEuMjhjMC43NTYtMC44MTYsMS4xNC0xLjkxMiwxLjA1Ni0zLjAyTDQ0Ny45ODgsMTM5LjY5NnogTTE3MiwxMTZjMC00Ni4zMTYsMzcuNjgtODQsODQtODRzODQsMzcuNjg0LDg0LDg0djIwSDE3MlYxMTZ6IE0xNTYsMjQ4Yy0yMi4wNiwwLTQwLTE3Ljk0NC00MC00MGMwLTE1Ljk2NCw4LTMwLjM0OCwyNC0zNi42NlYyMDhjMCw4LjgyNCw3LjE4LDE2LDE2LDE2czE2LTcuMTc2LDE2LTE2di0zNi42MzZjMTYsNi4zMTIsMjQsMjAuODA0LDI0LDM2LjYzNkMxOTYsMjMwLjA1NiwxNzguMDYsMjQ4LDE1NiwyNDh6IE0zNTYsMjQ4Yy0yMi4wNiwwLTQwLTE3Ljk0NC00MC00MGMwLTE1Ljk2NCw4LTMwLjM0OCwyNC0zNi42NlYyMDhjMCw4LjgyNCw3LjE4LDE2LDE2LDE2czE2LTcuMTc2LDE2LTE2di0zNi42MzZjMTYsNi4zMTIsMjQsMjAuODA0LDI0LDM2LjYzNkMzOTYsMjMwLjA1NiwzNzguMDYsMjQ4LDM1NiwyNDh6Ii8+PC9nPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=')
+        background-repeat: no-repeat
+        background-position 73% 10px
+        background-size: 20px 25px
         cursor: pointer
         color: #fff
-        font-size: 0!important 
-        font-weight: 600
+        font-weight: 800
         border-radius: 2px
         align-items: center
-        justify-content: center
+        justify-content: flex-start
         text-transform: uppercase
         display: flex
         height: 50px
         width: 100%
         text-decoration: none
         transition: $transition
-
-        &:after
-            content: 'Quero comprar'
-            cursor pointer
-            text-shadow:  0 0
-            font-size: 18px;
-            letter-spacing: 1px;
-            color: #ffffff;
-            font-weight: 600;
-            text-align: center
-            display inline-block
-
-         &:before
-             content: ''
-             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAMAAAC3SZ14AAABDlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8v3yHCAAAAWnRSTlMAQMb99aUYPvqxUGPb2g3DtwEX8XH3s6YJIP90uh68a92RMH6/0ov2YR8DywxJj+8/mbsmMTmD1TsZautW/gRTBek6G4XTJDWbuQpKtaNlinrlc8WVkKqpwG0I50RoAAAAvElEQVQYGQXBMUoDYRQGwPn+fbuboJWICBYWoqBoK9hZeQVv6gFs04tVUqR3ITaiZONMgCRJfkHAmCRJdlBgkUxOEtDA8Dfx1XUgzkMyo7NXW82QxCFJ5jnZXyptjJ/lAc2sizLm8/bHmrs4fJxN2v13r3eMYZoGFw/aaDQejVi3ttb3qtdbgd0OFa2uegDoN89tW+8A0OnqOgCgVFUAQKmqAIC36tqmAQDLVjcBAF6SxekTAFg95jUAgPwDLCclWPh/hxYAAAAASUVORK5CYII=')no-repeat;
-             display: inline-block
-             width: 23px
-             height: 24px
-             margin-left 10px
-
+        padding-left 65px
         &:hover
             color: #fff
             text-decoration: none
             background: darken(#4AC87A, 20%)    
+
+.product__payment
+    display flex
+    justify-content: flex-end
+    width 100%
+    margin-top: -50px
+    .addListaDesejos 
+        width: 220px
+        margin-right 75px
 
 #cepCarrinho 
     .summary
@@ -366,8 +359,8 @@
         max-width 100%
 
 .link-add-lista-produto
-    border: 1px solid $cor03
     border-radius: 3px
+    text-transform uppercase
     font-size: 12px
     line-height: 12px
     font-weight: 600 
@@ -376,8 +369,6 @@
     text-align: center
     align-items: center
     display: flex
-    height: 40px
-    padding: 0 15px 
     cursor: pointer
     justify-content: center
     margin-top 10px
@@ -385,8 +376,8 @@
 
     &:before
         @extend $ico-before
-        // background-image svg-inline(addlisth)
-        height: 18px
+        background-image url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEwcHgiIGhlaWdodD0iNTEwcHgiIHZpZXdCb3g9IjAgMCA1MTAgNTEwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTAgNTEwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGcgaWQ9ImZhdm9yaXRlIj48cGF0aCBkPSJNMjU1LDQ4OS42bC0zNS43LTM1LjdDODYuNywzMzYuNiwwLDI1Ny41NSwwLDE2MC42NUMwLDgxLjYsNjEuMiwyMC40LDE0MC4yNSwyMC40YzQzLjM1LDAsODYuNywyMC40LDExNC43NSw1My41NUMyODMuMDUsNDAuOCwzMjYuNCwyMC40LDM2OS43NSwyMC40QzQ0OC44LDIwLjQsNTEwLDgxLjYsNTEwLDE2MC42NWMwLDk2LjktODYuNywxNzUuOTUtMjE5LjMsMjkzLjI1TDI1NSw0ODkuNnoiLz48L2c+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==')
+        height: 12px
         width: 20px
         padding: 0
         margin-right 3px

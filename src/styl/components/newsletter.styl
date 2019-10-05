@@ -33,6 +33,28 @@
             input.btNews
                 margin 10px auto
                 float none
+                font-size: 0 !important
+                &:before
+                    content: 'Enviar'
+                    font: 12px
+                    text-transform uppercase
+    @media(max-width 480px)
+        .newsletter-box
+            flex-wrap: wrap
+            input
+                width: 100%
+                display block
+
+.footerNewsForm
+    input.btNews
+        margin 10px auto
+        float none
+        font-size: 0 !important
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAnCAMAAADqxVAhAAAAMFBMVEUAppgmraBCs6hYuq9rwLd9xr6NzMWc0syq2NO43tnF5ODR6ebd7+3p9PP0+vn///8alQ9mAAAA4UlEQVR4Ae3UUY6tIAyA4eIBiwj997/bm9pzdzBDzKT/gza+8CWNCC9KkNeUmMQkJjGJ+cESk5jGU2/YIaIMxYrIBxo0EdF4TYDZdmGYD6YYpw+zhGLBCIz3+W1M+Y/qjpHB7WdrYCrA4R96PPZgDKoyfJIDjsAMroV+HZ2xY02lYRfLMbI4lVseTDFqZ30xE92FkYk55uK6OQOjLKk+TDwru9Ykh+GYimESmBXWERjOLX/TcIzog3HBFZhKZMXX1JkbMXI7xk01MPdzfDHUMbIYf/UGTkxiEpOYxCQmMS/qH4JcI6bz2+huAAAAAElFTkSuQmCC')
+        background-color transparent
+        background-repeat no-repeat
+        background-size: 133px 40px 
+        background-position center
 .newsletter
     background-color: $cor01 !important
     padding: 15px
@@ -97,6 +119,14 @@
                 width: 100%
                 margin-bottom: 12px
                 text-align: center
+        input.btNews
+            margin 10px auto
+            float none
+            font-size: 0 !important
+            &:before
+                content: 'Enviar'
+                font: 12px
+                text-transform uppercase
     .newsletter-box + .newsletter-box
         display: none
     .newsletter-box

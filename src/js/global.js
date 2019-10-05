@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    
+
     //menu mobile
     $('.header__mainbar-mobile').click(function(){
         $('.header .menuMain').addClass('open');
@@ -111,6 +113,61 @@ $(document).ready(function () {
         ]
     });
 
+    //slick ruler
+    $('.ruler__list').slick({
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrow: false,
+        dots: false,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                autoplay: true,
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 481,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                arrows: false
+            }
+        }
+        ]
+    });
+
+    //slick ruler
+    $('.circle__wrapper').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrow: false,
+        dots: false,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: true
+            }
+        },
+        {
+            breakpoint: 481,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }
+        ]
+    });
+
+    
     var lastScrollTop = 0;
     $(window).scroll(function () {
         var st = $(this).scrollTop();

@@ -2,13 +2,10 @@
     border-bottom: 1px solid #cecece
     &__wrapper
         padding: 35px 0
-    &__list
-        display: flex
-        justify-content: space-between
-        align-items: center
+    
     &__item
         flex: 0 1 205px
-        display: flex
+        display: flex !important
         align-items: center
         div
             margin-left: 5px
@@ -152,7 +149,10 @@
                 display: block
                 text-transform: uppercase
                 color: $cor01
-                
+
+    @media(max-width: 991px)
+        &__item
+            justify-content: center
 .fbits-categoria
     .ruler
         border-top: 1px solid #cecece
