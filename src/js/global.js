@@ -142,7 +142,7 @@ $(document).ready(function () {
         ]
     });
 
-    //slick ruler
+    //circle ruler
     $('.circle__wrapper').slick({
         slidesToShow: 4,
         slidesToScroll: 4,

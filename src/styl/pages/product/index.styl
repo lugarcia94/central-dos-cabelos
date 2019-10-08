@@ -468,37 +468,45 @@
 
     .showcase__one
         position: relative
-        padding: 1px 0
         margin: 0!important
         width 100%!important
         overflow: hidden
-        padding-top: 75px
-
+        margin-bottom 30px !important
+        .spot
+            .spotContent
+                min-height 413px
         .item-block-title
-            border: none
-            margin-bottom: 20px
-            position relative
-            z-index 1
-            font-size: 25px
-            color: $cor02
-            line-height: 27px
-            text-align: center
-            text-transform: none
-            font-weight: 800
-            display flex
-            align-items: center
-            justify-content: center
-            margin-bottom: 30px
-            padding-bottom 10px
-            position relative
-
+            position: relative
+            margin-bottom 30px
+            span
+                border: none
+                margin-bottom: 20px
+                position relative
+                z-index 1
+                font-size: 25px
+                color: $cor02
+                line-height: 27px
+                text-align: center
+                text-transform: none
+                font-weight: 800
+                display flex
+                align-items: center
+                justify-content: center
+                margin 0 auto
+                margin-bottom: 0px
+                padding: 0 10px
+                padding-bottom 10px
+                position relative
+                background-color: #fff
+                width: fit-content
+                
             &:after
                 content: ''
-                height 5px
-                background $cor01
-                width: 5%
+                height 1px
+                background-color: #d9d9d9
+                width: 100%
                 position: absolute
-                bottom: 0
+                bottom: 21px
 
 
             .fbits-conteudo-item
@@ -1295,9 +1303,7 @@ div#fbits-avaliar-produto
 .slick-next
     right 0
 
-section.showcase__one.showcase__list .showcase__container 
-    margin-top: 80px
- 
+
 
 .fbits-comprar
     display: none!important

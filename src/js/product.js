@@ -127,8 +127,6 @@ define(['jquery', 'slick-carousel'], ($) => {
 
 
     productQty( $('[id*="produto-variante"]') );
-    
-
 
     // Brand Label
     const brandImage = $('.product__brand img');
