@@ -298,7 +298,25 @@ a#btnContinuarComprando
 
 .divPaiCarrosselCompreJunto
     height auto
-
+    background-color: transparent 
+    padding: 55px 25px 25px 25px
+    position relative
+    &:before
+        content: 'APROVEITE E '
+        font-size: 14px
+        font-weight bold
+        color: $cor02
+        position absolute
+        top: 25px
+        left: 25px
+    &:after
+        content: 'COMPRE JUNTO'
+        font-size: 14px
+        font-weight bold
+        color: $cor01
+        position absolute
+        top: 25px
+        left: 128px
     .precoDe
         float none
         width auto 
@@ -324,26 +342,58 @@ a#btnContinuarComprando
         font-size 12px
 
     .divFotosProduto
-        max-width 125px
+        max-width 88px
         margin-right 20px
+    
+    [id*=produto-item]
+        position relative
+        padding 0 30px
+        .fbits-comprejunto3
+            position absolute
+            right: 30px
+            bottom 0px
+            width: 190px
+            height 40px
+            background-color: #f3f3f3
+            display flex
+            justify-content: center
+            align-items: center
+            span.fbits-adicionar-produto
+                margin 0
+        @media(max-width: 991px)
+            justify-content: center !important
+            .fbits-comprejunto3
+                position relative
+                margin 0 auto
+                right initial
+    .slick-prev
+        left: 0px
+        top: 20%;
+        &.slick-disabled
+            opacity: .5
+    .slick-next
+        right: 0px
+        top: 36%;
+        &.slick-disabled
+            opacity: .5
 
 .compre__junto-wrapper
-    max-width 726px
+    width: 100%
+    max-width 100%
     margin 30px 0
 
-    @media(max-width: 1300px)
-        max-width 70%
+    @media(max-width: 1290px)
+        max-width 100%
     @media(max-width: 991px)
         max-width 100%
         
     .spotTitle
         font-size: 14px
-        color: #333333;
-        font-weight 400
+        color: $cor02
+        font-weight 500
         text-transform: none
         text-align: left
-        margin-bottom 18px
-
+        height initial
     .valorAtributoFoto
         margin-bottom 20px
 

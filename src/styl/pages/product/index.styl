@@ -127,7 +127,12 @@
         max-width: 100%
         margin-top 10px
         height auto
-
+        .slick-prev
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAABRFBMVEUzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM0NDQ2NjY3Nzc5OTk6Ojo9PT1BQUFCQkJDQ0NERERPT09TU1NUVFRWVlZYWFhZWVlaWlpdXV1kZGRnZ2doaGhra2tsbGxtbW12dnZ7e3t9fX2EhISFhYWGhoaRkZGSkpKWlpazs7O0tLS6urrBwcHHx8fKysrNzc3Pz8/T09PW1tbc3Nzg4ODi4uLk5OTl5eXn5+fw8PD5+fn6+vr8/Pz9/f3+/v7///+yDEB0AAAAM3RSTlMAAwQFBgcIFhclJicoQEFCQ0VGfH1+gYSFhoeIibi5z9DR0tPe3+Dm5+jp7/Dx8vP19vfuipfMAAABVUlEQVR4AY3T59PSQBgE8KUEAlKCgkLQiAgIEmNgkWLvvSgWxSIWESH//3eRYeTuCHnf3+eb5+b29oEgkjOtmkO7bp0wQvATL53jVtOMQxUtuJR1jscgSVS5q5KCIGvTTzstHOnQn5vBxhGb+9hJrGmnuV9Vwz/HGCSPFd1lEDcOoETFkBITCDcpu/b0/oiCVhgGZZff/Pj8mCIDRcpe/1zOXimXWRRdffHLm7+9RZGFOgVXxlNv9u4GJTVc4Fbv7rfF8v1tyi6Copvfl97kXo8ydCkYPP+6+P3hCSUOGhT1X37x/nx6cImCBk5RMno49ebjgfyuEhXPJh8fSXOKyFLRv3N9qOQcblHVo/JfMBnMPER/dKzkD+4htDPcr6JhLRmwFylsZFz662bxX7rtP8WAIFXhrrMJSGL5DmVuIQqVboqJnz+pw08oV7YaDp2aVT4awdZf/svHPvLAFBEAAAAASUVORK5CYII=') !important
+            background-color: transparent !important
+        .slick-next
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAAilBMVEUzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNJSUldXV19fX2zs7PLy8v19fX///+M4fTRAAAAJnRSTlMAAwQGBxYXJicoP0JDRXt8fYWGh4iJuLnP0NHf4Ofo6e/w8fX295+rfNMAAADtSURBVHjajdRtb4IwGIXhAyJTqwPG5GUISqlnc5v//+9tS0igUHl2fb6Tpu3TYsRTSV61bKs82XtwWac1B3W6xtQq6mjr4hUsTwXnig1Gdhe6XHZDojq6GYXepuUjbb9cUPCxMsCfZy6J8CvsuMSEAF64LAX8WmgaH4q2d04dkNDy9X3jxBEZx273+yzKcKLlcx5V0JQiDdIRfXAMWmw0TuJaFTIpYYZE3PsRSjzDA/xGuIvGB1L53hEaeX4QyXOIoBTmWX4XPXWl21X9650Otm+cK7ewBLGhzcQBpsL0zMH5NYSLt0/ySlNP/7EfWT+O2khDKEMAAAAASUVORK5CYII=')
+            background-color: transparent !important
         .slick-list
             height auto!important
 
@@ -140,7 +145,7 @@
             margin-bottom 15px!important
             max-width: 85px
 
-
+        
     .fbits-layout-item 
         display: none
     
@@ -245,6 +250,8 @@
         max-width: 1190px
         width: 100%
         margin: 0 auto
+        @media(max-width: 1290px)
+            max-width: 991px
         
     .product__price 
         position relative
@@ -316,7 +323,8 @@
         width: 100%
         flex-wrap: wrap
         justify-content: space-between
-    
+        @media(max-width: 1290px)
+            justify-content: center
     .optionAtributos
         >ul
             width: 100%
@@ -1110,7 +1118,11 @@ div#fbits-avaliar-produto
     @media(max-width : 991px)
         .header__topbar
             display: none
-            
+        #main
+            margin-top: -50px
+        .content.produto
+            margin-top: 0px
+            padding: 0 15px
     .etiqueta__produto 
         .fbits-etiqueta-selo 
             max-width: 130px
@@ -1504,6 +1516,64 @@ div#fbits-avaliar-produto
 .divPaiCarrosselCompreJunto .variante .optionAtributos
     display none
 
+.section-avaliar
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+    margin 80px 0
+    .indicar-amigo
+    .avaliar-produto
+        flex: 0 1 48%
+        padding 15px
+        border: 1px solid #f3f3f3
+        position relative
+        @media(max-width: 991px)
+            flex 1 1 100%
+            @media(max-width: 991px)
+                margin-bottom 120px
+    #fbits-indicacao-amigo
+    #fbits-avaliar-produto
+        width: 100%
+        h2.title.medium
+            background-color: #f3f3f3
+            padding 15px 50px
+            font-size: 16px 
+            font-weight: 800
+            color: $cor02
+            margin: 0;
+            position absolute
+            top: -68px;
+            left: -16px;
+            + span 
+                display: none
+            
+    span.fbits-indique-avalie.texto-indique, 
+    span.fbits-indique-avalie.texto-avalie
+        text-align left
+        color: $cor02
+        font-weight 600
+
+    input[type="text"].inputAvaliacao, 
+    .textAreaIndicar, 
+    .textAreaAvaliacao
+        border: 1px solid #f3f3f3
+        &:hover
+            border-color: #676767
+            color: #676767
+    
+    button#btnIndicar
+    button.bt.btMedium
+        background-color transparent
+        border: 3px solid $cor01
+        color: $cor01
+        font-size 15px !important
+        font-weight: 600
+        line-height initial
+        padding: 10px 15px
+        position absolute
+        bottom: -55px
+        right: 0px
+        
 li.atributos-container.atributos-cor 
     display: none!important
 

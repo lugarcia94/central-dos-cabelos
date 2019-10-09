@@ -516,7 +516,10 @@ button.btn-close-menu-mobile
                         font-size: 11px !important
 
 @media(max-width: 991px)
+    .moving--down .header .menuMain
+        margin-top initial
     .header
+    
         .menuMain
             position fixed
             top 0px
@@ -531,6 +534,7 @@ button.btn-close-menu-mobile
             transition: .3s
             &.open
                 left: 0
+                overflow-y: auto;
             .container
                 .menu
                     height initial

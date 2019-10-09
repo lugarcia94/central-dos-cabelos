@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-    
-
     //menu mobile
     $('.header__mainbar-mobile').click(function(){
         $('.header .menuMain').addClass('open');
@@ -10,6 +7,10 @@ $(document).ready(function () {
         $('.header .menuMain').removeClass('open');
     })
 
+    //produto frete
+    $('input#btnCalculaFreteProduto').attr('value', 'Calcular')
+    $('input#txtCalculaFreteProduto').attr('placeholder', 'Digite seu CEP')
+    
 
     if ($(".category__products >span").length) {
         $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
@@ -166,6 +167,18 @@ $(document).ready(function () {
         }
         ]
     });
+
+    //compre junto
+    $('.divCompreJuntoCarrossel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        infinite: false
+    });
+
+
+    
 
     
     var lastScrollTop = 0;

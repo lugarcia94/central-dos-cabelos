@@ -192,8 +192,8 @@ define(['jquery', 'slick-carousel'], ($) => {
                 breakpoint: 420,
                 settings  : {
                         arrows        : true,
-                        slidesToShow  : 2,
-                        slidesToScroll: 2,
+                        slidesToShow  : 1,
+                        slidesToScroll: 1,
                         infinite      : false,
                         dots          : true
                     }
