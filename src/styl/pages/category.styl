@@ -264,16 +264,7 @@
                 content: 'LIMPAR FILTROS'
                 font-size: 15px
                 color: #ffffff
-    &__products
-        width: 80%
-        >span#fbits-grupo-pagina-1
-            display: flex!important
-            flex-wrap: wrap
-            padding-top: 30px
-            justify-content: space-between
-        .fbits-item-lista-spot 
-            width 33%
-            min-height: 445px
+
     &__footer
         &-container
             max-width: 1190px
@@ -415,3 +406,15 @@
     
     .fbits-item-lista-spot.fbits-item-lista-spot-empty
         display none
+
+.fbits-categoria
+    .category__products 
+        > span
+            display: flex!important
+            flex-wrap: wrap
+            padding-top: 30px
+            justify-content: space-between
+
+        .fbits-item-lista-spot 
+            width 33%
+            min-height: 445px
