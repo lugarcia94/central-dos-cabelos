@@ -21,13 +21,15 @@ body
     transition: all 400ms ease-in-out
     padding-top: 162px
     margin 0
+
     @media(max-width: 991px)
       padding-top 150px
     
     @media(max-width: 991px)
       padding-top 126px
 
-
+    @media (min-width : 992px)
+        padding-top: 210px
 
 .active__body
     opacity: 1
@@ -111,3 +113,14 @@ body.minhaConta.fbits-minhaConta div.content.minhaconta .sideBar .filtroTitle.ti
     margin: 0 auto
     padding 0 15px
     overflow initial
+
+body.minhaConta.fbits-minhaConta div.content.minhaconta .sideBar .filtroTitle.title:after, .sideBar.institucionais .filtroTitle.title:after
+    display: none
+
+input[type="text"], input[type="password"]
+    width 100%
+
+.entrega
+    width 100% !important
+    float: none  !important
+    margin: 0 auto !important
