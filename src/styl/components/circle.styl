@@ -1,11 +1,13 @@
 .circle
     &__wrapper
         margin 30px 0
+
         a
             display: flex
             flex-wrap: wrap
             justify-content: center
             text-align center
+
             &:hover
                 figure 
                     visibility hidden
@@ -19,6 +21,7 @@
             span
                 flex: 1 1 100%
                 text-align center
+
             figure  
                 margin-bottom 20px
                 transition .3s
@@ -48,3 +51,13 @@
                     margin-right 5px
             img 
                 margin 0 auto
+
+
+        &:not(.slick-slider)
+            display flex
+            align-items: center
+
+        
+        @media (max-width : 991px)
+            .circle__item
+                flex: 0 0 100%

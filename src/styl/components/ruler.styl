@@ -1,8 +1,18 @@
 .ruler
     border-bottom: 1px solid #cecece
+    
     &__wrapper
         padding: 35px 0
     
+    &__list:not(.slick-slider)
+        display flex
+        align-items: center
+        justify-content: space-between
+
+        @media (max-width : 991px)
+            .ruler__item
+                flex: 0 0 100%
+
     &__item
         flex: 0 1 205px
         display: flex !important
@@ -73,6 +83,7 @@
         font-size: 14px
         font-weight: 600
         text-transform: uppercase
+
     .info__list
         border: 1px solid $cor01
         display: flex
