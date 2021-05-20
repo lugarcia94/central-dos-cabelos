@@ -326,6 +326,7 @@
         @media(max-width: 1290px)
             justify-content: center
     .optionAtributos
+
         >ul
             width: 100%
             >li
@@ -334,15 +335,11 @@
                     width: 100%
 
                     li  
-                        margin: 30px 0
-                        background-color: #f2f2f2
-                        padding: 25px
-
                         @media(max-width: 767px)
                             width 100%
                             text-align: center
 
-    [data-atributospagproduto]
+ 
         >div
             display: flex
             align-items: flex-start 
@@ -1278,6 +1275,9 @@ div#fbits-avaliar-produto
     margin-top: 3px
     margin-left: 2px
 
+.ui-slider-tabs-list-wrapper
+    display: none
+    
 .ui-slider-tabs-list-container
     .ui-slider-tabs-list
         width 100%!important
@@ -1459,12 +1459,10 @@ div#fbits-avaliar-produto
                 font-style: italic 
 
 .product__top
-    display flex
-    justify-content: space-between
-    align-items: center
-    flex-wrap: wrap
+    display block
     margin-bottom 50px
     width: 100%
+
 .product__details-header
     flex: 1 1 100%
     display flex
@@ -1477,16 +1475,10 @@ div#fbits-avaliar-produto
     display flex
     align-items: center
     justify-content: flex-end
+    
     .fbits-avaliacao
         width: fit-content !important
-    .avalie-top
-        display none
-    .avaliacao
-        width: fit-content !important
-        &:after
-            content: '|'
-            font-size: 12px
-            color #ccc
+    
 
 .short__review-ancor
     a
@@ -1592,3 +1584,9 @@ li.atributos-container.atributos-cor
 
 .fbits-indicacao-amigo, .fbits-avaliar-produto
     float none!important
+
+#bodyProduto .productOptions .variante-produto .valorAtributoFoto.valorAtributo.selected
+    border: 1px solid #000!important
+
+.optionAtributos ul li ul li div + div + div > div, .optionAtributos ul li .container-tamanhos
+    text-align: left  !important

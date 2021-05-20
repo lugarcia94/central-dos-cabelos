@@ -2,155 +2,112 @@
 <meta name="MobileOptimized" content="640">
 <meta name="viewport" content="initial-scale = 1, maximum-scale = 1, user-scalable = no">
 
-<a name="topo"></a>
 
-<header>
-    <div class="header-lane">
-        <div class="center fbits-center-responsivo">
-            <!--TOP LINKS -->
-            <a href="@string.Format(G.UrlEcommerce)" class="headerLogo">
-                <img src="@(B.Bal(G.UrlRecursosSSL, "i/logo-felix.png", false))" alt="Home" class="logoHome" />
-            </a>
-            <div class="right">
-                <ul class="user-links">
-                    <li class="user-links__item">
-                    <span>
-                        <svg class="user-links__icon icon-support">
-                            <use xlink:href="#support"></use>
-                        </svg>
-                        Atendimento
-                    </span>
-                        <ul class="user-links__dropdown">
-                            <li>
-                                <ul class="contact-list">
-                                    <li class="contact-list__whatsapp">
-                                    <span>
-                                        Whatsapp
-                                    </span>
-                                        <strong>
-                                            (11) 93334 4333
-                                        </strong>
-                                    </li>
-                                    <li class="contact-list__email">
-                                    <span>
-                                        E-mail
-                                    </span>
-                                        <a href="mailto:felix@felix.com.br">felix@felix.com.br</a>
-                                    </li>
+<header id="header" class="header">
+    <section class="header__topbar">
+        <div class="header__topbar-container">
+            <ul class="links__topbar">    
+                <li><a href="https://www2.centraldoscabelos.com.br/atendimento">Fale Conosco</a></li>
+                <li><a href="https://checkout.centraldoscabelos.com.br/AtualizarDadosUsuario">Minha Conta</a></li>
+            </ul>
+            <ul>
+                <span>Siga-nos:</span>
+                <li class="face"><a href="https://www.facebook.com/centraldoscabeloseperucas"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAPCAMAAAABFhU/AAAAJ1BMVEUAAAD/////+///////+/z/+/z/+/v/+/v/+vv/+vz/+/v/+/v//Pyf7/sDAAAADXRSTlMAID8Qv/9AkNDgwIBgOaqmIAAAADtJREFUCNeFyzEOgCAABMFBPBHw/++1MJpYGLeaZoGyLBXqmmSDllt7egGS4a1cPRqYM+nz+Dj+NEbDCXMMAY+7+0ohAAAAAElFTkSuQmCC"/></a></li>
+                <li class="insta"><a href="https://www.instagram.com/centraldoscabeloseperucas/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAATlBMVEUAAAD/////+///+v3/+/3/////+/z/+/z/+/v/+/z/+vz/+/v/+vz/+/v//Pz/////+vv//Pz/+v3/+vv/+/z//Pz/+/v/+/v/+/z/+vz4O4x6AAAAGnRSTlMAMD9vfxC//8Dw35DgQE8g0FBwz7BggI/voDNa7/EAAABtSURBVHgBNcsBDoIwDEDR32JpBw4YCur9L6rb5CVN+tMUQFSHm6pS2ejRpEmAOYxG5hG4ZyAvlt18hd+s0xapSLs4xAwlGdHT1/Z0ZSpgLlfu06KPJ2w1MxyxndbX2PmTBGR/aTO8T2p/ojvgC3MxBDgbG1umAAAAAElFTkSuQmCC"/></a></li>
+            </ul>
+        </div>
+    </section>
 
-                                    <li class="contact-list__support">
-                                    <span>
-                                        Aberto das 8 às 17h
-                                    </span>
-                                    </li>
-                                    <li class="contact-list__social">
-                                    <span>
-                                        Siga-nos
-                                    </span>
-                                        <a href="#" class="facebook">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="user-links__item">
-                        <a href="@string.Format( "{0}HistoricoPedido", G.UrlCarrinho )" class="topLink fbits-link-historicoPedido">
-                        <svg class="user-links__icon icon-orders">
-                            <use xlink:href="#orders"></use>
-                        </svg>
-                        @G.DadosComponente["FBITS:TopLink-Texto-HistoricoPedidos"]
-                        </a>
-                    </li>
-                    <li class="user-links__item">
-                        <a href="#">
-                            <svg class="user-links__icon icon-store">
-                                <use xlink:href="#store"></use>
-                            </svg>
-                            Loja física
-                        </a>
-                    </li>
-                </ul>
-                <div class="bottom">
-                    <a href="@string.Format( "{0}HistoricoPedido", G.UrlCarrinho )" class="user-account fbits-link-historicoPedido">
-                    <svg class="user-account__icon icon-user">
-                        <use xlink:href="#user"></use>
-                    </svg>
-                    Minha conta
-                    </a>
-                    <div class="search div-busca-desktop">
-                        @FBITSSearch.Add()
-                    </div>
-                    <div class="div-busca-topo-oculta">
-                        <!--SEARCH MOBILE-->
-                        <div class="headerSearch " itemscope="" itemtype="http://schema.org/WebSite">
-                            <meta itemprop="url" content="https://www.e-lens.com.br">
-                            <form id="searchFormMobile" autocomplete="off" method="get" action="/busca" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
-                                <meta itemprop="target" content="https://www.e-lens.com.br/Busca?busca={busca}">
-                                <input type="text" value="" class="inputSearch ac_input" id="txtBuscaMobile" itemprop="query-input" name="busca" placeholder="Buscar" autocomplete="off">
-                                <button class="btSearch greenBack" type="button" id="btnBuscaMobile">
-                                    buscar <i class="icon isearch"></i>
-                                </button>
-                            </form>
-                        </div>
-                        <!--SEARCH MOBILE-->
-                    </div>
-                    <ul class="help-list">
-                        <li class="help-list__item contact">
-                        <span class="contact__number">
-                            (11) 3334 4333
-                        </span>
-                            <span class="contact__info">
-                            <svg class="contact__icon icon-phone">
-                                <use xlink:href="#phone"></use>
-                            </svg>
-                            Televendas
-                        </span>
-                        </li>
-                        <li class="help-list__item help">
-                            <a href="#" class="help__link">
-                                Precisa de
-                                <span>
-                                <svg class="help__icon icon-help">
-                                    <use xlink:href="#help"></use>
-                                </svg>
-                                Ajuda
-                            </span>
-                            </a>
-                        </li>
-                        <li class="help-list__item cart">
-                            @FBITSCarrinho.Add()
-                        </li>
-                    </ul>
+    <section class="header__mainbar">
+        <div class="header__mainbar-container">
+            <div class="header__mainbar-wrapper">
+                
+                <div class="header__mainbar-mobile"></div>
+                
+                <div class="header__mainbar-logo">
+                    <FBITS:Logo />
                 </div>
+                
+                <div class="header__mainbar-serach">
+                    @FBITSSearch.Add()
+                </div>
+                
+                
+                <div class="header__mainbar-right">
+                    <div class="header__mainbar-links atendimento">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHRpdGxlPjwvdGl0bGU+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI2Y5NWE2YyIgZD0iTTEwMTAuNjQzIDQ4Ni43MTNjMC03Ni4yMjMtNDIuMDI4LTE0Mi40NjktMTA0LjAwMy0xNzcuMzc0LTM4LjExMS0xNzYuNjYxLTIwOC43MTYtMzEwLjIyNi00MTIuODA3LTMxMC4yMjYtMjE2LjE5OCAwLTM5NC42NCAxNDkuNTkzLTQxOC4xNDkgMzQxLjU3Mi0zOC40NjYgMzcuMDQzLTYyLjMzIDg4LjY4OS02Mi4zMyAxNDYuMzg2IDAgMTEyLjE5NSA5MS4xNzkgMjAzLjM3NCAyMDMuMzc0IDIwMy4zNzQgNy44MzcgMCAxNC4yNDctNi40MSAxNC4yNDctMTQuMjQ3di0zNzguNjEyYzAtNy44MzctNi40MS0xNC4yNDctMTQuMjQ3LTE0LjI0Ny05LjYxNyAwLTE4Ljg3NyAwLjcxMy0yOC4xMzkgMi4xMzYgNDUuMjM1LTExMC43NjkgMTY0LjkwOC0xOTAuMTk4IDMwNS4yNDEtMTkwLjE5OHMyNjAuMzYyIDc5LjQyNiAzMDUuNTk2IDE5MC41NTNjLTMuNTYyIDIuNDk0LTYuMDU2IDYuNzY5LTYuMDU2IDExLjc1M3YzNzguMjU3YzAgNy44MzcgNi40MSAxNC4yNDcgMTQuMjQ3IDE0LjI0NyA0LjYzIDAgOS4yNTktMC4zNTUgMTMuODkyLTAuMzU1LTMxLjcwMSA5OC4zMDMtMTE2LjgyNCAxNzUuOTUxLTIyNS40NTcgMjA2LjU4MS0xMy4xNzktMjEuMDE2LTM2LjMzLTM0LjkwNC02Mi42ODUtMzQuOTA0aC03OC4wMDNjLTQwLjYwNSAwLTczLjcyOSAzMy4xMjMtNzMuNzI5IDczLjcyOXYxNC4yNDdjMCA0MC45NiAzMy4xMjMgNzMuNzI5IDczLjcyOSA3My43MjloNzguMDAzYzM3LjM5OCAwIDY4LjAyOC0yNy40MjYgNzMuMDE2LTYzLjM5OCAxNDYuMzg2LTM4LjQ2NiAyNTguNTgxLTE0OS45NDggMjg2LjAwNy0yODguNTAxIDY5LjQ1NC0zMS43MDEgMTE4LjI1LTEwMi41NzcgMTE4LjI1LTE4NC40OTd2MHoiPjwvcGF0aD48L3N2Zz4="/>
+                        <span>
+                            Central de Atendimento
+                                <div class="atendimento__sub">
+                                    <div class="atendiento__wrapper">
+                                        <div class="online">
+                                            <h3>Atendimento Online</h3>
+                                            <span class="horario">De segunda à sexta, das 9h às 18h. Exceto Feriados.</span>
+                                            <span class="tel">(11) 3105-3052 / 3104-9623</span>
+                                            <span class="tel">(11) 3105-3052 / 3104-9623</span>
+                                            <a href="https://api.whatsapp.com/send?phone=5511985774167" class="tel" rel="noopener" target="_blank">(11) 98577-4167</a>
+                                            <a href="mailto:atendimento@centraldoscabelos.com.br" class="email">atendimento@centraldoscabelos.com.br</a>
+                                        </div>
+                                        <div class="fisico">
+                                             <h3>Atendimento Físico</h3>
+                                            <span class="loja"><strong>Loja Física</strong></span>
+                                            <span class="horario">De segunda à sexta, das 9h às 18h. Exceto Feriados.</span>
+                                            <span class="tel">(11) 3105-3052 / 3104-9623</span>
+                                            <span class="endereco">Av. Liberdade, 130 - 14º Andar Conj. 1407/1409 (ao lado do metrô Liberdade, com estacionamento fácil).</span>
+                                        </div>
+                                    </div>
+                                </div>
+                        </span>
+                    </div>
+                    <div class="header__mainbar-links user-bemvindo">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHRpdGxlPjwvdGl0bGU+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI2Y5NWE2YyIgZD0iTTk5OS4zODUgODE2LjE3OWMtMTkuMzYzLTY4Ljk1Ny00NS4zNDEtMTM0LjYxMi04MS4yNC0xOTcuNDMtMzQuNDc5LTYwLjQ1Ni0xMjUuMTY1LTg0LjA3My0xODMuMjYtNTIuOTAxLTI2LjQ0OCAxNC4xNy01Ni42NzkgMjIuNjcxLTg1Ljk2NCAzMC43MDEtMTI1LjYzNiAzMy41MzMtMjQ3LjAyNCAyMy42MTYtMzY1LjEwNC0zMi41OTItNTUuNzMzLTI2LjQ0OC0xMzYuMDI4LTExLjMzOC0xNzQuMjg5IDQ5LjEyMy0zNi44NCA1OC4wOTUtNjAuOTMxIDExOS45NzItODEuNzExIDE4NC42NzYtNy41NTUgMjMuNjE2LTMuMzA3IDM2LjM3IDE0LjY0IDUxLjQ4NSAxMzAuMzU5IDExMS40NjYgMjgyLjQ0OCAxNjQuODQyIDQ1Mi40ODQgMTc0Ljc1OSA1MC41MzktNS42NjkgMTAyLjAyMC04LjAzMCAxNTIuMDg5LTE3LjAwMiAxMjkuODg5LTIyLjY3MSAyNDUuMTM3LTc2Ljk4OCAzNDIuNDM0LTE2Ny4yMDQgNi4xMzktNi4xMzkgMTEuODA4LTE3LjAwMiA5LjkxNy0yMy42MTZ6Ij48L3BhdGg+PHBhdGggZmlsbD0iI2Y5NWE2YyIgZD0iTTUyNS4xNzEgNTQ2LjQ4YzE0My4xMTMtNS42NjkgMjYwLjcyMy0xMjAuNDQyIDI2MC4yNDgtMjc3LjcyNS0wLjQ3LTE0OS4yNTItMTIyLjgwNC0yNjkuMjI0LTI3My45NDctMjY4Ljc1My0xNTIuMDg5IDAuNDctMjczLjk0NyAxMjEuMzg4LTI3My40NzcgMjcyLjA1NiAwLjQ3IDE0Ny44MzYgMTE1LjcxOSAyODEuNTAyIDI4Ny4xNzEgMjc0LjQxOHoiPjwvcGF0aD48L3N2Zz4="/>
+                        <span>
+                            Olá, bem vindo
+                            <a href="#">
+                                Entrar
+                                <div class="login__sub">
+                                    <a href="@string.Format( "{0}AtualizarDadosUsuario", G.UrlCarrinho )">Login</a>
+                                    <a href="https://checkout.centraldoscabelos.com.br/Login/Cadastro">Cadastre-se</a>
+                                </div>
+                            </a></a>
+                        </span>
+                    </div>
+                            
+                   
+                    <div class="header__mainbar-cart">
+                        @FBITSCarrinho.Add()
+                        <span>
+                            Minha Sacola
+                        </span>
+                        
+                    </div>
+                </div>
+                
             </div>
         </div>
-    </div>
-    <div class="menu-lane menu-container">
-        <div class="ico-menu-fecha">X</div>
-        <div class="menu-mobile-dynamic">
-            <div class="navbar-mobile dynamic-content-headercustomerinfo">
-                <div class="header-links  pull-right">
-                    <ul class="rgt-content">
-                        <li id="account-dropdown" class="dropdown account-login">
-                            <a href="@string.Format( "{0}AtualizarDadosUsuario", G.UrlCarrinho )" class="fbits-link-minhaConta">
-                            <span class="icm-icon-user"></span> <span class="user-copy">Minha Conta</span>
-                            </a>
-                        </li>
-                        <li class="wishlist-icon wishlist-bag wishlistContainer ">
-                            <a href="@string.Format( "{0}ListaDeDesejos", G.UrlEcommerce )" class="fbits-link-listaDesejos">
-                            <span class="icm-icon-like"></span> <span class="wishlist-label">Wishlist</span>
-                            </a>
-                        </li>
-                        <li class="findastore">
-                            <!--LOGIN -->
-                            @FBITSLogin.Add()
-                            <!--LOGIN -->
-                        </li>
-                    </ul>
-                </div>
+    </section>
+    <div class="menuMain">
+        <button type="button" class="btn-close-menu-mobile">x</button>
+        <div rel="nofollow" class="menu-header-mobile">
+            <div class="header__topbar-container">
+                <ul class="links__topbar">    
+                    <li><a href="https://www2.centraldoscabelos.com.br/atendimento">Fale Conosco</a></li>
+                    <li><a href="https://checkout.centraldoscabelos.com.br/AtualizarDadosUsuario">Minha Conta</a></li>
+                </ul>
             </div>
+        </div>
+        <div class="container">
             @{Html.RenderAction("MenuTopo", "Menu");}
         </div>
+        <div class="menu__wrapper">
+        </div>
+        <div class="menu-footer-mobile">
+            <ul>
+                <span>Siga-nos:</span>
+                <li class="face"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAPCAMAAAABFhU/AAAAJ1BMVEX///8AAAAAAAAABAAABAQAAwMABAQABAQABAMABAQABQQABQMABANtOEeeAAAADHRSTlMAECA/QGCAkL/A0OB3o4KVAAAAO0lEQVQI14XLMQ6AIAAEwUEURO7/77UwmlgYt5pmgaXWAmVPskLPrSNzAZLhrVw9GmgtmW37OP40RscJvp0CeN8lc6IAAAAASUVORK5CYII="/></a></li>
+                <li class="insta"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAATlBMVEX///8AAAAAAAAAAAAABAAABAQAAwMAAwMAAwMABQIABQIABAIABAQABAQABAQABQMABAMABAMABAQABQQABQQABQMABQMABAMABAMABANeSQw5AAAAGXRSTlMAECAwP0BPUGBvcH+Aj5CgsL/Az9Df4O/wwSQSUAAAAG1JREFUeAE1yw0OwjAIQOHHoPuZczpctdz/otrWfQkJLwQANVtuZkYlR3hTsgK7C43uB/BOQBolhcQAvxny6WXSdgnwHaYieM8Y2tOVZQIJvXLNo72ecNZMMPu5SV995U8LkOJuzfLZqP3wboYvGbIFo1VA8wMAAAAASUVORK5CYII="/></a></li>
+            </ul>
+        </div>
     </div>
+  
 </header>

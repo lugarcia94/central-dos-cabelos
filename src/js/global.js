@@ -1,4 +1,23 @@
 $(document).ready(function () {
+    if (jQuery(window).width() > 992) {
+        $('.menu >li').each(function(){
+            var list = $(this).find('>ul').html();
+    
+            if($(this).find('>ul').length){
+                $(this).append('<div class="menu__dropdow"><ul class="menu__list"> ' + list);
+                $(this).find('>ul').remove();
+    
+                if($(this).find('>a img').length){
+                    var altdescricao = $(this).find('>a img').attr('alt');
+                    $(this).find('.menu__dropdow').append('<div class="menu__image"><a href="'+this.children[0]+'"><span>'+ $(this).find('>a').text() + '</span>' + $(this).find('>a').html() +'<span class="descricao">'+altdescricao+'</span></a></div>');
+                    $(this).find('>a img').remove();
+                }
+            }
+            $(this).addClass('list');
+        });
+    }
+
+    
     //menu mobile
     $('.header__mainbar-mobile').click(function(){
         $('.header .menuMain').addClass('open');

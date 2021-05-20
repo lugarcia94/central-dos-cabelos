@@ -295,11 +295,14 @@
         padding-top: 100px
         .header__topbar
             display: none
+
     .category
         &__banner
             display: none
+
         &__products
             width: 100%
+
         &__filter
             position: fixed
             top: 0
@@ -376,6 +379,7 @@
     .filter__open
         .category__filter
             transform: translate3d(0, 0, 0)
+            
 @media(max-width : 525px)
     .category__products
         .fbits-item-lista-spot
@@ -409,6 +413,8 @@
 
 .fbits-categoria
     .category__products 
+        flex: 1
+
         > span
             display: flex!important
             flex-wrap: wrap
@@ -418,3 +424,4 @@
         .fbits-item-lista-spot 
             width 33%
             min-height: 445px
+
