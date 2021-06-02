@@ -132,10 +132,16 @@
                 padding-top: 30px
     &__column
         flex: 1 1 24%;
+        padding: 0 15px
 
+        &--social
+            flex: 0 0 auto
+            max-width: 130px
+        
     @media(max-width: 1290px)
         &__container
             max-width: 991px
+
         &__column
             margin: 20px 0
             flex: 1 1 auto
@@ -160,6 +166,19 @@ li.footer__item.footer__item--horary
         	
 
 li.footer__item.footer__item--telefone
+    display flex
+    align-items: center
+    margin-bottom 10px
+
+    &:before
+        content: ''
+        background-image url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjk1YTZjIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAzNDguMDc3IDM0OC4wNzciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM0OC4wNzcgMzQ4LjA3NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnPjxnPjxwYXRoIGQ9Ik0zNDAuMjczLDI3NS4wODNsLTUzLjc1NS01My43NjFjLTEwLjcwNy0xMC42NjQtMjguNDM4LTEwLjM0LTM5LjUxOCwwLjc0NGwtMjcuMDgyLDI3LjA3NmMtMS43MTEtMC45NDMtMy40ODItMS45MjgtNS4zNDQtMi45NzNjLTE3LjEwMi05LjQ3Ni00MC41MDktMjIuNDY0LTY1LjE0LTQ3LjExM2MtMjQuNzA0LTI0LjcwMS0zNy43MDQtNDguMTQ0LTQ3LjIwOS02NS4yNTdjLTEuMDAzLTEuODEzLTEuOTY0LTMuNTYxLTIuOTEzLTUuMjIxbDE4LjE3Ni0xOC4xNDlsOC45MzYtOC45NDdjMTEuMDk3LTExLjEsMTEuNDAzLTI4LjgyNiwwLjcyMS0zOS41MjFMNzMuMzksOC4xOTRDNjIuNzA4LTIuNDg2LDQ0Ljk2OS0yLjE2MiwzMy44NzIsOC45MzhsLTE1LjE1LDE1LjIzN2wwLjQxNCwwLjQxMWMtNS4wOCw2LjQ4Mi05LjMyNSwxMy45NTgtMTIuNDg0LDIyLjAyQzMuNzQsNTQuMjgsMS45MjcsNjEuNjAzLDEuMDk4LDY4Ljk0MUMtNiwxMjcuNzg1LDIwLjg5LDE4MS41NjQsOTMuODY2LDI1NC41NDFjMTAwLjg3NSwxMDAuODY4LDE4Mi4xNjcsOTMuMjQ4LDE4NS42NzQsOTIuODc2YzcuNjM4LTAuOTEzLDE0Ljk1OC0yLjczOCwyMi4zOTctNS42MjdjNy45OTItMy4xMjIsMTUuNDYzLTcuMzYxLDIxLjk0MS0xMi40M2wwLjMzMSwwLjI5NGwxNS4zNDgtMTUuMDI5QzM1MC42MzEsMzAzLjUyNywzNTAuOTUsMjg1Ljc5NSwzNDAuMjczLDI3NS4wODN6Ii8+PC9nPjwvZz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+')
+        display block
+        width: 20px
+        height: 15px 
+        background-repeat: no-repeat
+
+li.footer__item.footer__item--whatsapp
     display flex
     align-items: center
     margin-bottom 10px
@@ -203,3 +222,18 @@ li.footer__item.footer__item--email
         color #fff
         text-align center
 
+
+
+.socials__list
+    display: flex
+    align-items: center
+
+    .socials__label
+        font-size: 0px
+
+    svg
+        width 25px
+        height 25px
+        fill: #f95a6c
+    li
+        margin-right: 5px

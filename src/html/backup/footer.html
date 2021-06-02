@@ -1,178 +1,35 @@
-@if (voltarTopo)
-{
-	<div id="jsFloatButton">
-		<a href="#topo" class="voltarTopo" title="Voltar ao topo"></a>
-	</div>
-	<script type="text/javascript">
-	  $('#jsFloatButton').hide();
-	  $(window).scroll(function () {
-		  if ($(this).scrollTop() != 0) {
-			  $('#jsFloatButton').fadeIn();
-		  } else {
-			  $('#jsFloatButton').fadeOut();
-		  }
-	  });
-	</script>
-}
-
-
-<footer>
-	<div class="center">
-		<section class="fbits-footer-blocos-vertical">
-			<ul class="blockfooter toggle">
-				<li class="titlefooter title-ajuda">Atendimento</li>
-				<li class="linksfooter">
-					<div class="contato-footer contato-fone">
-						<span class="icone-contato-footer"></span>@Html.Raw(G.Dados["Contato-TelefoneSAC"])
-					</div>
-					<div class="contato-footer horario-atendimento">
-						Horário de atendimento: <br/>
-						Segunda à Sexta das 9:00 às 18:00<br/>
-						Sábado das 09:00 às 13:00
-					</div>
-				</li>
-			</ul>
-		</section>
-		<section class="fbits-footer-blocos-vertical">
-			<ul class="blockfooter toggle">
-				<li class="titlefooter title-sobre-nos">Sobre Nós</li>
-				<li class="linksfooter">
-					<a href="@(eCommerceURL)QuemSomos">Quem somos</a>
-					<a href="@(eCommerceURL)CompraSegura">Compra segura</a>
-					<a href="@(eCommerceURL)ComoComprar">Como comprar</a>
-					<a href="@(eCommerceURL)PoliticadePrivacidade">Política de privacidade</a>
-					<a href="@(eCommerceURL)ContratoDeCompraEVenda">Termos de Compra e Venda</a>
-                    <a href="@(eCommerceURL)Fabricante/Fabricantes">Fabricantes</a>
-				</li>
-			</ul>
-		</section>
-		<section class="fbits-footer-blocos-vertical">
-			<ul class="blockfooter toggle">
-				<li class="titlefooter title-ajuda-suporte">Ajuda e Suporte</li>
-				<li class="linksfooter">
-					<a href="@(eCommerceURL)DuvidasFrequentes">Dúvidas Frequentes</a>
-					<a href="@(eCommerceURL)TrocaseDevolucoes">Trocas e devoluções</a>
-					<a href="@(eCommerceURL)FormasPagamento">Formas de pagamento</a>
-					<a href="@(eCommerceURL)Entrega">Frete e entrega</a>
-					<a href="@(eCommerceURL)Atendimento">Central de Atendimento</a>
-				</li>
-			</ul>
-		</section>
-		<section class="fbits-footer-blocos-vertical">
-			<ul class="blockfooter toggle">
-				<li class="titlefooter title-redes-sociais">Redes Sociais</li>
-				<li class="linksfooter socialnetwork">
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-face"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-					  <span class="icones-redes-footer icone-gmais"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-					  <span class="icones-redes-footer icone-twitter"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-youtube"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-insta"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-vimeo"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-snapchat"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-pinterest"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-linkedin"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-flickr"></span>
-					</a>
-					<a class="fbits-redes-sociais" target="_blank" href="#">
-						<span class="icones-redes-footer icone-blogger"></span>
-					</a>
-				</li>
-			</ul>
-		</section>
-		<section class="fbits-footer-blocos-horizontal clear">
-			<ul class="blockfooter noborder bloco-formas-pagamento">
-				<li class="titlefooter title-formas-pagamento">Formas de Pagamento</li>
-				<li class="linksfooter li-formas-pgto">
-					<span class="icones-pagamento-footer icone-boleto"></span>
-					<span class="icones-pagamento-footer icone-visa"></span>
-					<span class="icones-pagamento-footer icone-master"></span>
-					<span class="icones-pagamento-footer icone-paypal"></span>
-					<span class="icones-pagamento-footer icone-amex"></span>
-					<span class="icones-pagamento-footer icone-dois-cartoes"></span>
-					<span class="icones-pagamento-footer icone-diners"></span>
-					<span class="icones-pagamento-footer icone-deposito"></span>
-					<span class="icones-pagamento-footer icone-hipercard"></span>
-					<span class="icones-pagamento-footer icone-elo"></span>
-					<span class="icones-pagamento-footer icone-discover"></span>
-					<span class="icones-pagamento-footer icone-aura"></span>
-					<span class="icones-pagamento-footer icone-fastcash"></span>
-					<span class="icones-pagamento-footer icone-ayden"></span>
-					<span class="icones-pagamento-footer icone-stelo"></span>
-				</li>
-			</ul>
-			<ul class="blockfooter noborder bloco-certificados">
-				<li class="titlefooter title-certificados">Certificados e Segurança</li>
-				<li class="linksfooter li-certificados">
-					<span class="selo-seal">
-						<img alt="Wildcard SSL Certificates" border=0 id="ss_img" src="https://seal.alphassl.com/SiteSeal/images/alpha-ssl-logo.gif" title="SSL Certificate">
-					</span>
-				</li>
-			</ul>
-		</section>
-	</div>
-	<div class="copyright-footer">
-		<div class="center">
-			<section class="fbits-footer-blocos-horizontal clear">
-				<ul class="blockfooter noborder endereço-footer">
-					<address class="fbits-dadosEmpresa">
-						<span class="razaoSocial" data-nome="Razão Social">@G.Dados["DadosEmpresa-RazaoSocial"]</span>
-						<span class="cnpj" data-nome="CNPJ">@G.Dados["DadosEmpresa-CNPJ"]</span>
-						<span class="InscricaoEstadual" data-nome="Inscrição Estadual">@G.Dados["DadosEmpresa-InscricaoEstadual"]</span>
-						<span class="endereco" data-nome="Endereço">@G.Dados["DadosEmpresa-Endereco"]</span>
-						<span class="bairro" data-nome="Bairro">@G.Dados["DadosEmpresa-Bairro"]</span>
-						<span class="cidade" data-nome="Cidade">@G.Dados["DadosEmpresa-Cidade"]</span>
-						<span class="estado" data-nome="Estado">@G.Dados["DadosEmpresa-Estado"]</span>
-						<span class="cep" data-nome="CEP">@G.Dados["DadosEmpresa-CEP"]</span>
-					 </address>
-				</ul>
-				<ul class="blockfooter noborder logo-fbits">
-					<a target="_blank" href="http://www.fbits.com.br/solucao/f-store-plataforma-de-ecommerce/?utm_source=@(G.NomeEcommerce)&utm_medium=F-Store&utm_term=F-Store&utm_content=Rodape&utm_campaign=MiniBannerRodapeHome" title="F-Store powered by FBITS"><i class="fstore replace">F-Store powered by FBITS</i></a>
-				</ul>
-				<ul class="blockfooter noborder copyright">
-					<p>&copy; <span class="copyright-direitos">Todos os direitos reservados.</span> Eventuais promoções, descontos e prazos de pagamento expostos aqui são válidos apenas para compras via internet. As fotos, textos e layout aqui veiculados são de propriedade da Loja. É proibida a utilização total ou parcial sem nossa autorização.</p>
-				</ul>
-			</section>
-		</div>
-	</div>
-</footer>
-
-
-<div id="utility">
-
-	<img src="@(B.Bal( G.UrlRecursosSSL, "i/topbar/banner.png", false))" alt="Banner" />
-
-</div>
-
-
-
-<script>
-$(".toggle .titlefooter").click(function(){
-  $(this).next().toggle();
-  $(this).toggleClass("opened");
-});
-</script>
-
-
-@Html.Partial("_ViewSwitcher")
-@Zanox.InsertScript(Convert.ToBoolean(G.Dados["ZanoxAtivo"]))
-
-@{Html.RenderAction("SelectGrupoScriptTag", "GrupoScriptTag", new { @posicao = EnumPosicaoScript.FooterBaixo });}
+<li class="socials__item socials__item--facebook">
+	<a class="socials__link" href="https://www.facebook.com/centraldoscabelo" rel="noreferrer" target="_blank">
+		<span class="socials__icon">
+			<svg width="15px" height="26px" viewBox="0 0 15 26">
+				<path d="M9.140625,26 L4.9769592,26 C4.28149414,26 3.71575928,25.4342651 3.71575928,24.7388 L3.71575928,15.3474426 L1.2865906,15.3474426 C0.591125488,15.3474426 0.025390625,14.7815094 0.025390625,14.0862427 L0.025390625,10.062027 C0.025390625,9.3665619 0.591125488,8.80082704 1.2865906,8.80082704 L3.71575928,8.80082704 L3.71575928,6.78564453 C3.71575928,4.78752137 4.34318544,3.08753966 5.5299988,1.86978147 C6.72216797,0.646469129 8.38822938,0 10.3480683,0 L13.5234833,0.00515744531 C14.2177582,0.00634765625 14.7825012,0.57208252 14.7825012,1.26635742 L14.7825012,5.00274658 C14.7825012,5.6982117 14.2169647,6.26394651 13.521698,6.26394651 L11.383728,6.26474002 C10.7317047,6.26474002 10.5656738,6.39546202 10.5301666,6.43553163 C10.4716492,6.50198362 10.4020233,6.68983458 10.4020233,7.20855713 L10.4020233,8.80062869 L13.3610229,8.80062869 C13.583786,8.80062869 13.7996063,8.85557557 13.9850769,8.95912169 C14.3851776,9.18267822 14.6339264,9.60539247 14.6339264,10.0622254 L14.6323395,14.086441 C14.6323395,14.7815094 14.0666046,15.3472443 13.3711395,15.3472443 L10.4020233,15.3472443 L10.4020233,24.7388 C10.4020233,25.4342651 9.83609006,26 9.140625,26 L9.140625,26 Z M5.23999023,24.475769 L8.87759397,24.475769 L8.87759397,14.6650696 C8.87759397,14.2006988 9.25547792,13.8230133 9.71965028,13.8230133 L13.1081085,13.8230133 L13.1094971,10.325058 L9.71945193,10.325058 C9.25527952,10.325058 8.87759397,9.94737245 8.87759397,9.48300173 L8.87759397,7.20855713 C8.87759397,6.6130676 8.93809511,5.93585205 9.38758849,5.42684939 C9.93070985,4.81152344 10.7866516,4.74050901 11.3833313,4.74050901 L13.2582703,4.7397156 L13.2582703,1.5289917 L10.346878,1.52423096 C7.19725038,1.52423096 5.23999023,3.54040527 5.23999023,6.78564453 L5.23999023,9.48300173 C5.23999023,9.94717405 4.86230469,10.325058 4.39813232,10.325058 L1.54962158,10.325058 L1.54962158,13.8230133 L4.39813232,13.8230133 C4.86230469,13.8230133 5.23999023,14.2006988 5.23999023,14.6650696 L5.23999023,24.475769 Z"></path>
+			</svg>
+		</span>
+		<span class="socials__label">Facebook</span>
+	</a>
+</li>
+<li class="socials__item socials__item--instagram">
+	<a class="socials__link" href="https://www.instagram.com/centraldoscabelo" rel="noreferrer" target="_blank">
+		<span class="socials__icon">
+			<svg width="26px" height="26px" viewBox="0 0 26 26">
+				<path d="M18.9620361,0 C22.8428345,0 26,3.15716553 26,7.03796387 L26,18.9622345 C26,22.8428345 22.8428345,26 18.9622345,26 L7.03796387,26 C3.15716553,26 0,22.8428345 0,18.9622345 L0,7.03796387 C0,3.15716553 3.15716553,0 7.03796387,0 L18.9620361,0 Z M24.475769,18.9622345 L24.475769,7.03796387 C24.475769,3.99763488 22.0023651,1.52423096 18.9622345,1.52423096 L7.03796387,1.52423096 C3.99763488,1.52423096 1.52423096,3.99763488 1.52423096,7.03796387 L1.52423096,18.9622345 C1.52423096,22.0023651 3.99763488,24.475769 7.03796387,24.475769 L18.9620361,24.475769 C22.0023651,24.475769 24.475769,22.0023651 24.475769,18.9622345 Z M13,5.89082335 C16.9200744,5.89082335 20.1091766,9.07992556 20.1091766,13 C20.1091766,16.9200744 16.9200744,20.1091766 13,20.1091766 C9.07992556,20.1091766 5.89082335,16.9200744 5.89082335,13 C5.89082335,9.07992556 9.07992556,5.89082335 13,5.89082335 Z M13,18.5849457 C16.0796051,18.5849457 18.5849457,16.0796051 18.5849457,13 C18.5849457,9.92059326 16.0796051,7.41505431 13,7.41505431 C9.92059326,7.41505431 7.41505431,9.92059326 7.41505431,13 C7.41505431,16.0796051 9.92059326,18.5849457 13,18.5849457 Z M20.2791748,3.36604308 C21.4376221,3.36604308 22.3800507,4.30827333 22.3800507,5.46672059 C22.3800507,6.62516786 21.4376221,7.56759646 20.2791748,7.56759646 C19.1207275,7.56759646 18.1784973,6.62516786 18.1784973,5.46672059 C18.1784973,4.30847168 19.1207275,3.36604308 20.2791748,3.36604308 Z M20.2791748,6.0431671 C20.5971527,6.0431671 20.8558197,5.78450011 20.8558197,5.46672059 C20.8558197,5.14874268 20.5971527,4.89027404 20.2791748,4.89027404 C19.9613953,4.89027404 19.7027283,5.14874268 19.7027283,5.46672059 C19.7027283,5.78450011 19.9613953,6.0431671 20.2791748,6.0431671 Z"></path>
+			</svg>
+		</span>
+		<div class="socials__label">Instagram</div>
+	</a>
+</li>
+<li class="socials__item socials__item--youtube">
+	<a class="socials__link" href="https://www.youtube.com/channel/UCQCvRlXMnkqfnTC1cCd2RZQ" rel="noreferrer" target="_blank">
+		<span class="socials__icon">			
+			<svg  viewBox="0 0 49 49" style="enable-background:new 0 0 49 49;" xml:space="preserve">
+				<path d="M39.256,6.5H9.744C4.371,6.5,0,10.885,0,16.274v16.451c0,5.39,4.371,9.774,9.744,9.774h29.512
+					c5.373,0,9.744-4.385,9.744-9.774V16.274C49,10.885,44.629,6.5,39.256,6.5z M47,32.726c0,4.287-3.474,7.774-7.744,7.774H9.744
+					C5.474,40.5,2,37.012,2,32.726V16.274C2,11.988,5.474,8.5,9.744,8.5h29.512c4.27,0,7.744,3.488,7.744,7.774V32.726z"/>
+				<path d="M33.36,24.138l-13.855-8.115c-0.308-0.18-0.691-0.183-1.002-0.005S18,16.527,18,16.886v16.229
+					c0,0.358,0.192,0.69,0.502,0.868c0.154,0.088,0.326,0.132,0.498,0.132c0.175,0,0.349-0.046,0.505-0.137l13.855-8.113
+					c0.306-0.179,0.495-0.508,0.495-0.863S33.667,24.317,33.36,24.138z M20,31.37V18.63l10.876,6.371L20,31.37z"/>
+			</svg>
+		</span>
+		<div class="socials__label">youtube</div>
+	</a>
+</li>

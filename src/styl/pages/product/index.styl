@@ -1275,14 +1275,25 @@ div#fbits-avaliar-produto
     margin-top: 3px
     margin-left: 2px
 
-.ui-slider-tabs-list-wrapper
-    display: none
-    
 .ui-slider-tabs-list-container
+    overflow: inherit  !important
+
     .ui-slider-tabs-list
         width 100%!important
         display: flex
-        justify-content: space-between
+        justify-content: flex-start
+
+        @media (max-width :991px)
+            flex-wrap: wrap
+
+            li
+                flex: 0 0 100%
+                width 100%!important
+
+                a
+                    display: block  !important
+                    width: 100% !important
+
 
 .showcase__one
     .slick-prev, .slick-next 
@@ -1588,5 +1599,6 @@ li.atributos-container.atributos-cor
 #bodyProduto .productOptions .variante-produto .valorAtributoFoto.valorAtributo.selected
     border: 1px solid #000!important
 
-.optionAtributos ul li ul li div + div + div > div, .optionAtributos ul li .container-tamanhos
+.optionAtributos ul li ul li div + div + div > div, 
+.optionAtributos ul li .container-tamanhos
     text-align: left  !important
